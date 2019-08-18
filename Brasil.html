@@ -1,0 +1,41 @@
+<canvas width="600" height="400"> 
+</canvas>
+
+
+<script >
+	
+	//bandeira Italia em 2D
+
+	var tela = document.querySelector('canvas');	
+	var pincel = tela.getContext ('2d');	
+
+	pincel.fillStyle = 'black';
+	pincel.fillRect (0, 0, 600, 400);
+	
+	pincel.fillStyle = 'green';
+	pincel.fillRect (2, 2, 596, 396);
+
+
+	pincel.fillStyle = 'yellow'
+	pincel.beginPath();
+	pincel.moveTo(100, 200);
+	pincel.lineTo(290, 50);
+	pincel.lineTo(500, 200);
+	
+	pincel.fill();
+
+	pincel.fillStyle = 'yellow'
+	pincel.beginPath();
+	pincel.moveTo(100, 200);
+	pincel.lineTo(290, 350);
+	pincel.lineTo(500, 200);
+	
+	pincel.fill();
+	
+	pincel.fillStyle = 'darkblue';
+	pincel.beginPath();
+	pincel.arc (290 , 200, 80 , 0, 2 * 3.14);
+	pincel.fill();
+	
+
+</script>
