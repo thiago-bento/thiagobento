@@ -1,0 +1,43 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+	var tela = document.querySelector ('canvas');
+	var pincel = tela.getContext ('2d');
+
+		pincel.fillStyle = 'black';
+		pincel.fillRect (0,0, 600, 400);
+
+	function preencha(cor,x,y,a,l ) {
+
+		pincel.fillStyle = cor;
+		pincel.fillRect (x,y,a,l);
+		
+}
+
+		preencha('yellow',100,100,50,50);
+		preencha('green',50,50,50,50);
+		preencha('green',150,150,50,50);
+		preencha('green',150,50,50,50);
+		preencha('green',50,150,50,50);
+
+	function desenhaCirculo(mouse)	{
+
+		var largura = mouse.pageX - tela.offsetLeft;
+		var altura = mouse.pageY - tela.offsetTop;
+
+		pincel.fillstyle = 'blue';
+		pincel.beginPath ();
+		pincel.arc (largura, altura, 10, 0, 2*3.14);
+		pincel.fill();
+
+		
+	}
+
+
+
+tela.onclick = desenhaCirculo;
+
+
+
+</script>
