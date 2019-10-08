@@ -5,30 +5,30 @@
         <meta charset="UTF-8">
         <link rel= "icon" href="favicon.png">
         <link rel= "stylesheet" href="bio.css">
-        <!-- carrega a fonte Crimson Text nas versões normal, itálico e negrito -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
-        <!-- carrega a fonte Open Sans Condensed na versão negrito, -->
-        <!-- que é a única necessária para os cabeçalhos            -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">  <!-- carrega a fonte Crimson Text nas versões normal, itálico e negrito -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700"> <!-- carrega a fonte Open Sans Condensed na versão negrito, -->
     </head>
 
         <body>                   <!-- corpo da pagina-->
             <main>               <!--Conteúdo principal-->
                     <h1> Sobre mim</h1>
-
-                        <p>Moro em São Paulo mas atendo clientes do mundo todo. Sou conhecido por fazer produtos de qualidade, 
-                            durabilidade e que agregam valor para meus clientes.
-                        Trabalho usando a web como plataforma, ou seja, respiro HTML5, CSS3 e JavaScript (ou melhor: ECMASCript).
-                        Crio sites para todos, seguindo as principais diretivas de acessibilidade, responsividade e web semântica,
-                        sem descuidar da qualidade de código.</p>
-
+                        <article>
+                            <p>Moro em São Paulo mas atendo clientes do mundo todo. Sou conhecido por fazer produtos de qualidade, 
+                                durabilidade e que agregam valor para meus clientes.
+                            Trabalho usando a web como plataforma, ou seja, respiro HTML5, CSS3 e JavaScript (ou melhor: ECMASCript).
+                            Crio sites para todos, seguindo as principais diretivas de acessibilidade, responsividade e web semântica,
+                            sem descuidar da qualidade de código.</p>
+                        </article>
                         <h2>Como trabalho </h2>
+                        <article>
                             <blockquote>
-                        <p>Joao é melhor programador de HTML da atualidade</p>    
-                            <cite>
-                        <p> Jose Almeida</p>
-                            </cite>
-                            </blockquote>    
+                            <p>Joao é melhor programador de HTML da atualidade</p>    
+                                <cite>
+                            <p> Jose Almeida</p>
+                                </cite>
+                                </blockquote>    
+                        </article>        
+                        
                         <p>Satisfazer meus clientes é prioridade. Para isso, garanto um processo de desenvolvimento altamente interativo,
                         baseado em feedback contínuo. Não trabalho com escopo fechado: <em>o cliente é que decide quando o produto está pronto</em> .
 
@@ -36,9 +36,9 @@
 
 
                         <h2>Experiência</h2>
-                        <blockquote>
+                        <blockquote><!-- Destaca o tempo-->
                                 <p>Joao domina muito bem todas as linguagens que conhço!</p>    
-                                    <cite>
+                                    <cite> <!-- Citaçao de um pessoa-->
                                 <p> Manuel Almeida, Petrobras</p>
                                     </cite>
                                     </blockquote>  
@@ -53,13 +53,28 @@
 
                         <p>Procuro repassar meu conhecimento para a comunidade. Para isso, 
                             já dei diversas palestras e mantenho um <a href="blog.html">Blog.</a></p>
-                    
-            </main>
-            <nav>  <!-- atribuir semantica à pagina-->
-                <ul> <!--INformação que inicializará uma lista = 5-->
-                    <li><a href="#" >Home <!-- tipo do HTML = 5-->
-                    <li><a href="#" >Portifólio</a> </li>
-                </ul>
-            </nav>
+                            Tags: <a href="#">leia mais</a>
+                            <p>Tags: <a href="#">design responsivo</a>, <a href="#">mobile</a>, <a href="#">css</a></p>
+                            <img src="eu.jpg" alt= "Foto joao"> 
+                            
+                         
+           </main>
+                
+                        <aside>
+                                <nav>  <!-- atribuir semantica à pagina-->
+                                
+                                    <h1> João da silva </h1>
+                                    <ul> <!--INformação que inicializará uma lista = 5-->
+                                        <li><a href="index.html" >Home <!-- tipo do HTML = 5-->
+                                        <li><a href="portifolio.html" >Portifólio</a> </li>
+                                        <li><a href="bio.html" >Sobre mim</a> </li>
+                                        <li><a href="blog.html" >Blog</a> </li>
+                                        <li><a href="contato.html" >Contato</a> </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                <footer> <!-- atribuir semantica à pagina-->
+                    &copy; João da Silva 2014.
+                </footer>
         </body>
 </html>
