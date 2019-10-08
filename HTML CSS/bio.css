@@ -38,6 +38,7 @@ footer {
 
 nav a{
      color: #F2FFFC;
+     text-decoration: none;
      }
 
 ul {
@@ -48,6 +49,7 @@ ul li a {
         color: black ;
         font-family: "Open Sans Condensed", sans-serif;
     }
-a{
+    
+a   {
         color: rgb(160, 158, 110);
     }    
