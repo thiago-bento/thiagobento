@@ -9,12 +9,13 @@ main h1{
     font-size:40px;
     color: azure;
     background-color: rgb(82, 17, 143);
-        font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
+    border-bottom: 10px solid black;
         }
 
 main div {
-            width: 720px;
+            width: 1080px;
             margin: auto;
         }
 
@@ -23,10 +24,14 @@ main div {
     font-size:25px;
     background-color: rgb(107, 119, 90);
     font-family: "Open Sans Condensed";
+    line-height: 25px;
+    border: 5px ridge rgb(80, 82, 78);
+    padding: 5px;
         }               
 
 p {        
    text-align: justify;
+   
   }
 
 cite{
@@ -36,7 +41,9 @@ cite{
 blockquote {
         background-color: #D9E5E3;
         padding: 16px;
-        border: 10px solid rgb(159, 207, 199);
+        border: 10px solid #C2CCCA;
+        border-bottom-color: #333;
+        border-right-color: #FFF;
         margin: 0px;
         width :  250px;
         box-sizing: border-box;
@@ -48,7 +55,7 @@ footer {
     background-color:  rgb(3, 5, 5);
     margin: 1px;
     color: #FFF;
-    padding: 20px;
+    padding: 15px;
     border: 5px ridge #CCC;
        }
 
@@ -60,7 +67,7 @@ nav a{
 ul {
         color: red;
         margin: 50px;
-        list-style-type: disc;
+        list-style-type: circle;
        
 }
     
@@ -68,6 +75,7 @@ ul li a {
         color: black ;
         font-family: "Open Sans Condensed", sans-serif;
         margin: 5px;
+             
         
         } 
     
@@ -77,8 +85,10 @@ a   {
 
 
 div {
-        width: 720px;
-        margin-left: auto;
-        margin-right: auto;
+    border-left: 30px solid red;
+    border-bottom: 30px solid red;
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    width: 0;
     }
 

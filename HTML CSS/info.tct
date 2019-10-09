@@ -1,0 +1,45 @@
+  
+  
+  
+   --- tamanho da fonte
+ font-size:40px
+
+   --- Tipo da fonte, caso nao tenha, usa as outras.
+ font-family: Georgia, 'Times New Roman', Times, serif;
+
+   --- cor da fonte
+ color: azure;
+
+   --- alinhamento do texto.
+   text-align: justify;
+
+   --- cor do fundo to texto
+ background-color: rgb(82, 17, 143)
+
+   --- espaçamento entre o texto e a background
+ padding: 20px;
+
+
+   --- espacamento das informações do site com a tela
+   width: 1080px;
+   
+   --- definição das margens
+   margin: auto;
+
+   --- espaçamento entre linhas do texto
+   line-height: 25px;
+   
+   --- estrutura da borda do texto.
+    border: 5px ridge rgb(80, 82, 78);
+
+   --- Tipo da imagem que fica antes de um determinado link
+    list-style-type: disc;
+
+     
+    --- Definição de uma borda vazia direita, esquerda, acima e abaixo.
+     
+    border-left: 30px solid red;
+    border-bottom: 30px solid red;
+    border-top: 30px solid transparent;
+    border-right: 30px solid transparent;
+    width: 0;
