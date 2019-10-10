@@ -3,6 +3,7 @@ body  {
         font-size:20px;
         background-color: rgb(216, 216, 205);
         font-family: 'Courier New', Courier, monospace;
+        margin: 20px;
       }    
         
 main h1{
@@ -16,7 +17,7 @@ main h1{
 
 main div {
             width: 1080px;
-            margin: auto;
+            
         }
 
 
@@ -31,6 +32,7 @@ main div {
 
 p {        
    text-align: justify;
+   margin: 20px;
    
   }
 
@@ -85,10 +87,9 @@ a   {
 
 
 div {
-    border-left: 30px solid red;
-    border-bottom: 30px solid red;
-    border-top: 30px solid transparent;
-    border-right: 30px solid transparent;
-    width: 0;
+    border-left: 30px solid rgb(7, 7, 7);
+    border-bottom: 30px solid rgb(48, 46, 46);
+    margin: 5px;
+    
     }
 
