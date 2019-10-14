@@ -61,6 +61,19 @@ footer {
     border: 5px ridge #CCC;
        }
 
+aside {
+
+    background-color: rgb(82, 17, 143);
+    color: seashell;
+    text-align: center;
+    padding: 20px;
+
+}       
+
+aside li{
+        display: inline-block;
+}
+
 nav a{
      color: #F2FFFC;
      text-decoration: none;
@@ -74,9 +87,10 @@ ul {
 }
     
 ul li a {
-        color: black ;
-        font-family: "Open Sans Condensed", sans-serif;
+        color: rgb(255, 255, 255) ;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         margin: 5px;
+        line-height: 25px;
              
         
         } 
