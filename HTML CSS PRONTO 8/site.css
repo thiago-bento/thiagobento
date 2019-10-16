@@ -79,7 +79,10 @@ em {
 }
 
 .icones-redes-sociais li {
-	display: inline-block;
+	background-image: url(github.png);
+	height: 40px;
+	width: 40px;
+	text-indent: -9999999px;
 }
 
 .artigo {
@@ -95,4 +98,8 @@ em {
 	font-size: 24px;
 	text-align: center;
 	background-color: #E6E7E8;
+}
+
+.paragrafo {
+	text-indent: 25px;
 }
