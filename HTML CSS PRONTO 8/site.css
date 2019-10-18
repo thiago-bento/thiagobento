@@ -119,3 +119,20 @@ em {
 	background-color: #E6E7E8;
 }
 
+cite {
+
+	font-style: italic;
+	float: right;
+	
+}
+
+.fiat {
+
+	float: right;
+}
+
+
+.petrobras {
+
+	float: left;
+}
