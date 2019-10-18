@@ -34,7 +34,7 @@ p {
 }
 
 .navegacao-site {
-	padding-top: 50px;
+	padding: 50px;
 	text-transform: uppercase;
 	text-align: center;
 	background-color: #3C1D3D;
@@ -52,7 +52,6 @@ main a {
 }
 
 .navegacao-site a {
-	
 	color: inherit;
 	font-family: "Open Sans Condensed", sans-serif;
 }
