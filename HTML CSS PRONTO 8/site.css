@@ -7,6 +7,8 @@ body {
 
 h1, h2 {
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
+	text-transform: uppercase;
+	border-bottom: 2px solid black;
 }
 
 .titulo-principal {
@@ -32,9 +34,12 @@ p {
 }
 
 .navegacao-site {
+	padding-top: 50px;
+	text-transform: uppercase;
 	text-align: center;
 	background-color: #3C1D3D;
 	color: #F2FFFC;
+	
 }
 
 .rodape-pagina {
@@ -47,6 +52,7 @@ main a {
 }
 
 .navegacao-site a {
+	
 	color: inherit;
 	font-family: "Open Sans Condensed", sans-serif;
 }
@@ -64,6 +70,7 @@ main a {
 .navegacao-site h1 {
 	font-size: 30px;
 	margin-bottom: 25px;
+	
 }
 
 strong {
@@ -78,12 +85,24 @@ em {
 	font-size: 30px;
 }
 
-.icones-redes-sociais li {
-	background-image: url(github.png);
-	height: 40px;
-	width: 40px;
-	text-indent: -9999999px;
+.icones-sociais a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-indent: -99999px;
 }
+.github {
+    background-image: url(github.png);
+}
+
+.twitter {
+     background-image: url(twitter.png);
+}
+
+.linkedin {
+    background-image: url(linkedin.png);
+}
+
 
 .artigo {
 	padding-bottom: 30px;
@@ -100,6 +119,3 @@ em {
 	background-color: #E6E7E8;
 }
 
-.paragrafo {
-	text-indent: 25px;
-}
