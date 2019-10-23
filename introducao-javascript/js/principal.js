@@ -44,7 +44,7 @@ if (tdpeso > 200 || tdpeso < 20 ) {
     validaPeso = false;
 } 
 
-if (tdaltura > 3.00 || tdaltura < 1.00) {
+if (tdaltura >= 3.00 || tdaltura < 1.00) {
 
     altura.textContent = "altura incorreta";
     validaAltura = false;
