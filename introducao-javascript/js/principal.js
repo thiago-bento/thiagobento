@@ -24,31 +24,37 @@ console.log (calculaImc());
 
 
 var paciente = document.querySelector ("#primeiro-paciente"); //seleciona o ID da classe toda
-var peso = paciente.querySelector (".info-peso").textContent;
-var altura = paciente.querySelector (".info-altura").textContent;
-var imc = peso / (altura * altura);
+
+var peso = paciente.querySelector (".info-peso");
+var tdpeso = peso.textContent;
+
+var altura = paciente.querySelector (".info-altura");
+var tdaltura = altura.textContent;
+
+var imc = tdpeso / (tdaltura * tdaltura);
 var tdimc = paciente.querySelector(".info-imc");
 
 var validaAltura = true;
 var validaPeso = true;
 
-function validaDados () {
-if (peso > 200 || peso < 20 ) {
 
-    tdimc.textContent = "Peso incorreto";
+if (tdpeso > 200 || tdpeso < 20 ) {
+
+    peso.textContent = "Peso incorreto";
     validaPeso = false;
 } 
 
-if (altura > 3.00 || altura < 1.00) {
+if (tdaltura > 3.00 || tdaltura < 1.00) {
 
-    tdimc.textContent = "altura incorreta";
+    altura.textContent = "altura incorreta";
     validaAltura = false;
 }
 
 if (validaAltura && validaPeso) {
     tdimc.textContent = imc;
-    }
+    
+} else {
+    tdimc.textContent = "Altura e/ou peso inválidos!"
 }
-
-
-validaDados ();
+    console.log (tdaltura);
+    console.log (altura);
