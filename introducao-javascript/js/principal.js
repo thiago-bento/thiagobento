@@ -3,8 +3,6 @@ var titulo = document.querySelector (".container"); //Atribui uma variavel a uma
 
 titulo.textContent = "Nutricionista"; //Seleciona a variavel e altera o conteudo.
 
-
-
 var pacientes = document.querySelectorAll (".paciente"); //seleciona o ID da classe toda
 
 function calculaImc(){
