@@ -22,17 +22,20 @@ function calculaImc(){
         if (tdpeso > 200 || tdpeso < 20 ) {
     
             peso.textContent = "Peso incorreto";
+            paciente.style.backgroundColor = "lightcoral";
+            paciente.style.color = "red";
             validaPeso = false;
         } 
     
         if (tdaltura >= 3.00 || tdaltura < 1.00) {
     
-            altura.textContent = "altura incorreta";
+            altura.textContent = "altura incorreta"
+            paciente.classList.add ("paciente-invalido");
             validaAltura = false;
         }
     
         if (validaAltura && validaPeso) {
-            tdimc.textContent = imc.toFixed(2   );
+            tdimc.textContent = imc.toFixed(2);
             
             } else {
             tdimc.textContent = "Altura e/ou peso inválidos!"
