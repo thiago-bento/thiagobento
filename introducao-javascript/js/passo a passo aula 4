@@ -1,0 +1,22 @@
+1 - criar um id no <form> para poder selecionar no JS
+
+2 - criar uma variavel e selecionar o id que foi criado <form>.
+
+3- criar variaveis relecionadas aos valores do que foi inserido no input-> nomeDaVariael =  variavelDoForm.nomedoinpute.value
+
+4- utilizar a funcção 
+var = nomevariavel = document.createElement("tr") -> cria uma TR (Principal)
+
+5- utilizar a funcção var = nomevariavel = document.createElement("td") -> cria uma TD (Filho)
+
+6 - ler o valor que foi pego nas variaveis TD e TR -> nomedavariavel.textContent = nome do TD
+
+7 - Atribuir os valores da TR nas TD (filho) - > nomedavaeriaveltr.appendChild(nomedavariavelTD)
+
+8- criar uma variavel para incluir a TR dentdo do <tbory> (tem im id de tabela-paciente) -> nomedavariavel = document.queruSelector (# nome do id do Tbody) .
+
+9- criando os filhos do Tbody - > nomedavariaveldoIDtbory.appendChild(nomevariavelTR).
+
+
+
+

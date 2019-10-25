@@ -56,9 +56,34 @@ titulo.addEventListener("click", function (){
 var botaoAdicionar = document.querySelector ("#adicionar-paciente")
 
 botaoAdicionar.addEventListener("click", function(event){
-        event.preventDefault();
-        console.log ("cliquei");
-})
+        event.preventDefault(); //não deixa a tela atualizar.
+        
+        var botaoForm = document.querySelector("#btAdicionar")
+
+        var inNome = botaoForm.nome.value;
+        var inpeso = botaoForm.peso.value;
+        var inAltura = botaoForm.altura.value;
+        var inGordura = botaoForm.gordura.value;
+        
+        console.log (inNome, inpeso, inAltura, inGordura);
+
+        var trNova = document.createElement("tr");
+
+        var tdNome = document.createElement("td");
+        var tdPeso = document.createElement("td");
+        var tdAltura = document.createElement("td");
+        var tdGordura = document.createElement("td");
+        var tdImc = document.createElement("td");
+
+   
+       
+       6 - ler o valor que foi pego nas variaveis TD e TR -> nomedavariavel.textContent = nome do TD
+       
+       7 - Atribuir os valores da TR nas TD (filho) - > nomedavaeriaveltr.appendChild(nomedavariavelTD)
+       
+       8- criar uma variavel para incluir a TR dentdo do <tbory> (tem im id de tabela-paciente) -> nomedavariavel = document.queruSelector (# nome do id do Tbody) .
+       
+       9- criando os filhos do Tbody - > nomedavariaveldoIDtbory.appendChild(nomevariavelTR).
 
 
 
