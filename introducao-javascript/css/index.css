@@ -61,7 +61,7 @@ table{
 td, th {
 	padding: .7em;
 	margin: 0;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	text-align: center;
 }
 
@@ -91,7 +91,7 @@ label{
 }
 
 .grupo{
-	width: 32%;
+	width: 42%;
 	display: inline-block;
 	padding: 10px 0px;
 }
@@ -135,5 +135,5 @@ button[disabled=disabled], button:disabled {
 
 .paciente-invalido {
 	background-color: rgb(245, 142, 142);
-	color: deeppink;
+	
 }

@@ -23,7 +23,7 @@ function calculaImc(){
     
             peso.textContent = "Peso incorreto";
             paciente.style.backgroundColor = "lightcoral";
-            paciente.style.color = "red";
+            
             validaPeso = false;
         } 
     
@@ -47,3 +47,18 @@ for (var i=0 ; i < pacientes.length ; i++){
     calculaImc();
 }
    
+titulo.addEventListener("click", function (){
+    console.log ("Titulo da página");
+}); 
+
+
+
+var botaoAdicionar = document.querySelector ("#adicionar-paciente")
+
+botaoAdicionar.addEventListener("click", function(event){
+        event.preventDefault();
+        console.log ("cliquei");
+})
+
+
+
