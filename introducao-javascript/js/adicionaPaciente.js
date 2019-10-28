@@ -36,3 +36,51 @@ botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel d
 
        
 });
+
+
+/*
+(calcula imc.js)
+
+
+function calculaImc(peso,altura){
+var imc = 0;
+
+imc = peso / (altura*altura);
+
+return imc.tofixed(2);
+
+}
+
+
+depois adicionar a variavel no validação do pesovalido e altura valida = a função (peso,altura)
+
+
+no ((adicioina paciente))
+ao pegar o valor do imc atribuir a funçãoIMC(peso, altura);
+incluir um td com o valor do retorno da função imc.
+
+
+------------------------//-----------------------------------
+
+criar uma função para pegar as informações que o form necessita
+
+
+function obterdadosPaciente (form){
+
+var paciente2 = {
+nome: form.nome.value,
+peso: form.peso.value,
+altura: form.altura.value,
+gordura: form.gordura.value,
+imc: calculaImc(form.peso.value, form.altura.value)
+}
+return paciente2
+}
+
+
+depois abaixo da variavel do form.
+- var paciente2= nomedafuncao(form)
+
+
+
+
