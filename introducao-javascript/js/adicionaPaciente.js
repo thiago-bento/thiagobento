@@ -7,11 +7,9 @@ botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel d
 
         var form = document.querySelector("#form-adiciona");  //cria uma variavel para o ID do <Form> para poder ler as informacoes que ha dentro dele.
        
-        var nome = form.nome.value; //atribiu o valor digitado à varivel do nome do id dentro do form.
-        var peso = form.peso.value;
-        var altura = form.altura.value;
-        var gordura = form.gordura.value;
-        
+        var paciente = obtemPacienteDoFormulario(form); //atribiu o valor digitado, pego no objeto à varivel do nome do id dentro do form.
+    
+        console.log(paciente);
         var pacienteTr = document.createElement("tr");  //atribiu uma varivel a uma nova <TR>
 
         var nomeTd = document.createElement("td");//atribiu uma varivel a uma nova <TD>
@@ -37,10 +35,22 @@ botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel d
        tabela.appendChild(pacienteTr);
 });
 
-function calculaImc(peso, altura){
+        function calculaImc(peso, altura){
         var imc = 0;
 
         imc = peso / (altura * altura);
 
         return imc.toFixed(2);
     }
+
+        function obtemPacienteDoFormulario(form) {
+
+        var paciente = {
+            nome: form.nome.value,
+            peso: form.peso.value,
+            altura: form.altura.value,
+            gordura: form.gordura.value
+        }
+        return paciente;
+    }
+    
