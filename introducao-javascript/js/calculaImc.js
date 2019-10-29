@@ -11,7 +11,6 @@ for (var i=0 ; i < pacientes.length ; i++){
     var altura = paciente.querySelector (".info-altura");
     var tdaltura = altura.textContent;
     
-    var imc = tdpeso / (tdaltura * tdaltura);
     var tdimc = paciente.querySelector(".info-imc");
     
     var validaAltura = true;
@@ -33,6 +32,7 @@ for (var i=0 ; i < pacientes.length ; i++){
         }
     
         if (validaAltura && validaPeso) {
+            var imc = tdpeso / (tdaltura * tdaltura);
             tdimc.textContent = imc.toFixed(2);
             
             } else {

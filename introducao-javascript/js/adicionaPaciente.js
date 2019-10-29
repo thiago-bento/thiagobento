@@ -5,82 +5,42 @@ botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel d
 
         event.preventDefault(); //não deixa a tela atualizar quando clicar no botao.
 
-        var botaoForm = document.querySelector("#btAdicionar");  //cria uma variavel para o ID do <Form> para poder ler as informacoes que ha dentro dele.
-
-        var inNome = botaoForm.nome.value; //atribiu o valor digitado à varivel do nome do id dentro do form.
-        var inpeso = botaoForm.peso.value;
-        var inAltura = botaoForm.altura.value;
-        var inGordura = botaoForm.gordura.value;
+        var form = document.querySelector("#form-adiciona");  //cria uma variavel para o ID do <Form> para poder ler as informacoes que ha dentro dele.
+       
+        var nome = form.nome.value; //atribiu o valor digitado à varivel do nome do id dentro do form.
+        var peso = form.peso.value;
+        var altura = form.altura.value;
+        var gordura = form.gordura.value;
         
-        var trNova = document.createElement("tr");  //atribiu uma varivel a uma nova <TR>
+        var pacienteTr = document.createElement("tr");  //atribiu uma varivel a uma nova <TR>
 
-        var tdNome = document.createElement("td"); //atribiu uma varivel a uma nova <TD>
-        var tdPeso = document.createElement("td");
-        var tdAltura = document.createElement("td");
-        var tdGordura = document.createElement("td");
-        var tdImc= document.createElement("td");
-
-        tdNome.textContent = inNome; // com a variavel para criar uma TD, pega o valor da varivel do input.
-        tdPeso.textContent = inpeso;
-        tdAltura.textContent = inAltura;
-        tdGordura.textContent = inGordura;
-         
-       trNova.appendChild(tdNome); //Cria o valor da TD dentro da TR
-       trNova.appendChild(tdPeso);
-       trNova.appendChild(tdAltura); 
-       trNova.appendChild(tdGordura);
+        var nomeTd = document.createElement("td");//atribiu uma varivel a uma nova <TD>
+        var pesoTd = document.createElement("td");
+        var alturaTd = document.createElement("td");
+        var gorduraTd = document.createElement("td");
+        var imcTd = document.createElement("td");
+        
+        nomeTd.textContent = nome;// com a variavel para criar uma TD, pega o valor da varivel do input.
+        pesoTd.textContent = peso;
+        alturaTd.textContent = altura;
+        gorduraTd.textContent = gordura;
+        imcTd.textContent = calculaImc(peso,altura);
+        
+       pacienteTr.appendChild(nomeTd); //Cria o valor da TD dentro da TR
+       pacienteTr.appendChild(pesoTd);
+       pacienteTr.appendChild(alturaTd);
+       pacienteTr.appendChild(gorduraTd);
+       pacienteTr.appendChild(imcTd);
        
-       var tbodyNovo = document.querySelector ("#tabela-pacientes");
+       var tabela = document.querySelector("#tabela-pacientes");
 
-       tbodyNovo.appendChild(trNova);
-
-       
+       tabela.appendChild(pacienteTr);
 });
 
+function calculaImc(peso, altura){
+        var imc = 0;
 
-/*
-(calcula imc.js)
+        imc = peso / (altura * altura);
 
-
-function calculaImc(peso,altura){
-var imc = 0;
-
-imc = peso / (altura*altura);
-
-return imc.tofixed(2);
-
-}
-
-
-depois adicionar a variavel no validação do pesovalido e altura valida = a função (peso,altura)
-
-
-no ((adicioina paciente))
-ao pegar o valor do imc atribuir a funçãoIMC(peso, altura);
-incluir um td com o valor do retorno da função imc.
-
-
-------------------------//-----------------------------------
-
-criar uma função para pegar as informações que o form necessita
-
-
-function obterdadosPaciente (form){
-
-var paciente2 = {
-nome: form.nome.value,
-peso: form.peso.value,
-altura: form.altura.value,
-gordura: form.gordura.value,
-imc: calculaImc(form.peso.value, form.altura.value)
-}
-return paciente2
-}
-
-
-depois abaixo da variavel do form.
-- var paciente2= nomedafuncao(form)
-
-
-
-
+        return imc.toFixed(2);
+    }
