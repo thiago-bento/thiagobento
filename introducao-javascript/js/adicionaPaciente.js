@@ -9,7 +9,7 @@ botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel d
        
         var paciente = obtemPacienteDoFormulario(form); //atribiu o valor digitado, pego no objeto à varivel do nome do id dentro do form.
     
-        console.log(paciente);
+        
         var pacienteTr = document.createElement("tr");  //atribiu uma varivel a uma nova <TR>
 
         var nomeTd = document.createElement("td");//atribiu uma varivel a uma nova <TD>
