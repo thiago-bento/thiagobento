@@ -1,56 +1,51 @@
 
 var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria uma variavel para o ID do botao, para fazer algo.
-
-botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel do botáo a funcao adicionar uma lista de eventos e cria uma funcao anonima dentro qnd clicar.
-
+    botaoAdicionar.addEventListener("click", function(event){ //atribui a variavel do botáo a funcao adicionar uma lista de eventos e cria uma funcao anonima dentro qnd clicar.
         event.preventDefault(); //não deixa a tela atualizar quando clicar no botao.
 
         var form = document.querySelector("#form-adiciona");  //cria uma variavel para o ID do <Form> para poder ler as informacoes que ha dentro dele.
-       
-        var paciente = obtemPacienteDoFormulario(form); //atribiu o valor digitado, pego no objeto à varivel do nome do id dentro do form.
-    
+        var paciente = obtemPacienteDoFormulario(form); //Extraindo informações do objeto do paciente do FORM.
         
-        var pacienteTr = document.createElement("tr");  //atribiu uma varivel a uma nova <TR>
+        var pacienteTr = montaTr(paciente); //Monta a TR com base no Paciente
 
-        var nomeTd = document.createElement("td");//atribiu uma varivel a uma nova <TD>
-        var pesoTd = document.createElement("td");
-        var alturaTd = document.createElement("td");
-        var gorduraTd = document.createElement("td");
-        var imcTd = document.createElement("td");
-        
-        nomeTd.textContent = nome;// com a variavel para criar uma TD, pega o valor da varivel do input.
-        pesoTd.textContent = peso;
-        alturaTd.textContent = altura;
-        gorduraTd.textContent = gordura;
-        imcTd.textContent = calculaImc(peso,altura);
-        
-       pacienteTr.appendChild(nomeTd); //Cria o valor da TD dentro da TR
-       pacienteTr.appendChild(pesoTd);
-       pacienteTr.appendChild(alturaTd);
-       pacienteTr.appendChild(gorduraTd);
-       pacienteTr.appendChild(imcTd);
-       
-       var tabela = document.querySelector("#tabela-pacientes");
+        var tabela = document.querySelector("#tabela-pacientes"); //  le toda a tabela do TBODY
 
-       tabela.appendChild(pacienteTr);
-});
+    tabela.appendChild(pacienteTr); // Cria uma TR a partir da tabela
 
-        function calculaImc(peso, altura){
-        var imc = 0;
+    form.reset();
 
-        imc = peso / (altura * altura);
+});    
+   
+    function obtemPacienteDoFormulario(form) {
 
-        return imc.toFixed(2);
-    }
-
-        function obtemPacienteDoFormulario(form) {
-
-        var paciente = {
-            nome: form.nome.value,
-            peso: form.peso.value,
-            altura: form.altura.value,
-            gordura: form.gordura.value
-        }
-        return paciente;
+            var paciente = {
+                nome: form.nome.value,
+                peso: form.peso.value,
+                altura: form.altura.value,
+                gordura: form.gordura.value,
+                imc: calculaImc(form.peso.value, form.altura.value)
+            }
+            return paciente;
     }
     
+    function montaTr(paciente){
+        var pacienteTr = document.createElement("tr");  //Cria uma TR
+        pacienteTr.classList.add("paciente");
+           
+       pacienteTr.appendChild(montaTd (paciente.nome, "info-nome")); //Cria o valor da TD dentro da TR
+       pacienteTr.appendChild(montaTd (paciente.peso, "info-peso"));
+       pacienteTr.appendChild(montaTd (paciente.altura, "info-altura"));
+       pacienteTr.appendChild(montaTd (paciente.gordura, "info-gordura"));
+       pacienteTr.appendChild(montaTd (paciente.imc, "info-imc"));
+       
+       
+        return pacienteTr;
+    }
+
+    function montaTd (dado, classe){
+
+        var td = document.createElement("td");
+        td.textContent =  dado;
+        td.classList.add(classe);
+        return td;
+    }

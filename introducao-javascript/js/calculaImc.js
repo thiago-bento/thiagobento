@@ -5,42 +5,50 @@ var pacientes = document.querySelectorAll (".paciente"); //seleciona o ID da cla
 for (var i=0 ; i < pacientes.length ; i++){
     var paciente = pacientes[i];
 
-    var peso = paciente.querySelector (".info-peso");
-    var tdpeso = peso.textContent;
+    var tdPeso = paciente.querySelector (".info-peso");
+    var peso = tdPeso.textContent;
     
-    var altura = paciente.querySelector (".info-altura");
-    var tdaltura = altura.textContent;
+    var tdAltura = paciente.querySelector (".info-altura");
+    var altura = tdAltura.textContent;
     
-    var tdimc = paciente.querySelector(".info-imc");
+    var tdImc = paciente.querySelector(".info-imc");
     
     var validaAltura = true;
     var validaPeso = true;    
     
-        if (tdpeso > 200 || tdpeso < 20 ) {
-    
-            peso.textContent = "Peso incorreto";
-            paciente.style.backgroundColor = "lightcoral";
-            
+        if (peso > 200 || peso < 20 ) {
             validaPeso = false;
+            tdPeso.textContent = peso + " ->Peso incorreto";
+            paciente.style.backgroundColor = "lightcoral";
+            paciente.classList.add ("paciente-invalido");
         } 
     
-        if (tdaltura >= 3.00 || tdaltura < 1.00) {
-    
-            altura.textContent = "altura incorreta"
-            paciente.classList.add ("paciente-invalido");
+        if (altura >= 3.00 || altura < 1.00) {
             validaAltura = false;
+            tdAltura.textContent = altura + " ->altura incorreta";
+            paciente.classList.add ("paciente-invalido");
+        }
+        
+        if (validaAltura == false && validaPeso == false) {
+            tdImc.textContent = "Altura e/ou peso inválidos!";
+            console.log (validaAltura,validaPeso);
         }
     
         if (validaAltura && validaPeso) {
-            var imc = tdpeso / (tdaltura * tdaltura);
-            tdimc.textContent = imc.toFixed(2);
+            var imc = calculaImc(peso,altura);
+            tdImc.textContent = imc;
             
-            } else {
-            tdimc.textContent = "Altura e/ou peso inválidos!"
-        }
+        } 
 }
    
 
+function calculaImc(peso, altura){
+    var imc = 0;
+
+    imc = peso / (altura * altura);
+
+    return imc.toFixed(2);
+}
 
 
 
