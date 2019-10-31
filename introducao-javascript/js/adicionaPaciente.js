@@ -4,9 +4,16 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
         event.preventDefault(); //não deixa a tela atualizar quando clicar no botao.
 
         var form = document.querySelector("#form-adiciona");  //cria uma variavel para o ID do <Form> para poder ler as informacoes que ha dentro dele.
+      
         var paciente = obtemPacienteDoFormulario(form); //Extraindo informações do objeto do paciente do FORM.
-        
         var pacienteTr = montaTr(paciente); //Monta a TR com base no Paciente
+        
+
+        if (!validaPaciente(paciente)) {
+            alert ("Peso invalido");
+            form.reset();
+            return;
+        }
 
         var tabela = document.querySelector("#tabela-pacientes"); //  le toda a tabela do TBODY
 
@@ -18,14 +25,14 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
    
     function obtemPacienteDoFormulario(form) {
 
-            var paciente = {
-                nome: form.nome.value,
-                peso: form.peso.value,
-                altura: form.altura.value,
-                gordura: form.gordura.value,
-                imc: calculaImc(form.peso.value, form.altura.value)
-            }
-            return paciente;
+        var paciente = {
+            nome: form.nome.value,
+            peso: form.peso.value,
+            altura: form.altura.value,
+            gordura: form.gordura.value,
+            imc: calculaImc(form.peso.value, form.altura.value)
+        }
+        return paciente;
     }
     
     function montaTr(paciente){
@@ -48,4 +55,12 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
         td.textContent =  dado;
         td.classList.add(classe);
         return td;
+    }
+
+    function validaPaciente(paciente) {
+        if (pesoCorreto(paciente.peso)) {
+            return true;
+        } else {
+            return false;
+        }
     }
