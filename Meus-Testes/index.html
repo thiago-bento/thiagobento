@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+        <script>
+
+            function calcularTabuada(){  
+            
+                var x = document.getElementById("numero").value;
+                var total = 0;
+
+                for (var i=1 ; i<=10 ; i++){
+                    result = i*x;
+                    
+                    total= total+i+"x"+x+"="+result+"<br />" ;
+
+                    console.log (total);
+                }
+                
+            }   
+            
+        
+    
+        </script>
+
+    </head>
+        <title>Tabuada</title>
+    <body>
+
+        <h3> Exibide a tabuada</h3>
+
+        <p> Digite um numero para calcular</p>
+
+       <input id="numero" name="num1" type="number" placeholder="Digite o numero" class="numero-calculo">
+
+
+        <button onclick=calcularTabuada()> Calcule</button>
+
+       <p>valores calculados são:</p>  <span id = "demo" > </span>
+      
+
+    </body>
+</html>
