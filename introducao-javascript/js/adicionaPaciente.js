@@ -8,9 +8,11 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
         var paciente = obtemPacienteDoFormulario(form); //Extraindo informações do objeto do paciente do FORM.
         var pacienteTr = montaTr(paciente); //Monta a TR com base no Paciente
         
+        var erro = validaPaciente(paciente);
 
-        if (!validaPaciente(paciente)) {
-            alert ("Peso invalido");
+        if (erro.length >0) {
+            var mensagemErro = document.querySelector("#mensagem-erro");
+            mensagemErro.textContent = erro;
             form.reset();
             return;
         }
@@ -59,8 +61,8 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
 
     function validaPaciente(paciente) {
         if (pesoCorreto(paciente.peso)) {
-            return true;
+            return "";
         } else {
-            return false;
+            return "Peso Inválido, o máximo é de 300 kg e minino 1gk";
         }
     }
