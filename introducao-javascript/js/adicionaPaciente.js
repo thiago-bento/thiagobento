@@ -8,12 +8,10 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
         var paciente = obtemPacienteDoFormulario(form); //Extraindo informações do objeto do paciente do FORM.
         var pacienteTr = montaTr(paciente); //Monta a TR com base no Paciente
         
-        var erro = validaPaciente(paciente);
-
-        if (erro.length >0) {
-            var mensagemErro = document.querySelector("#mensagem-erro");
-            mensagemErro.textContent = erro;
-            form.reset();
+        var erros = validaPacientes(paciente);
+        console.log(erros);
+        if(erros.length > 0){
+            exibeMensagensDeErro(erros);
             return;
         }
 
@@ -24,7 +22,20 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
     form.reset();
 
 });    
-   
+
+    function exibeMensagensDeErro(erros){
+        var ul = document.querySelector("#mensagens-erro");
+        erros.forEach(function(erro){
+            var li = document.createElement("li");
+            li.textContent = erro;
+            ul.appendChild(li);
+        });
+    }
+    
+
+
+
+
     function obtemPacienteDoFormulario(form) {
 
         var paciente = {
@@ -59,7 +70,7 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
         return td;
     }
 
-    function validaPaciente(paciente) {
+    function validaPacientes(paciente) {
         if (pesoCorreto(paciente.peso)) {
             return "";
         } else {
