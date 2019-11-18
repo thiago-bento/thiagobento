@@ -1,0 +1,49 @@
+hr { 
+    background-color:#333; border: 1px #000000 solid
+ } 
+
+button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #eee275;
+        padding: 5px 20px;
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#6b6b6b),
+            to(#000000));
+        background: linear-gradient(
+            top,
+            #6b6b6b 0%,
+            #000000);
+        border-radius: 30px;
+        border: 1px solid #000000;
+        box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.7);
+        text-shadow:
+            0px -1px 0px rgba(000,000,000,0.4),
+            0px 1px 0px rgba(255,255,255,0.3);
+    }
+             
+}
+
+span { 
+    
+    font-weight:bold; color:#39F; }
+
+h3 {
+
+    color: blue;
+    
+}    
+input {
+    color: crimson;
+    text-align: center;
+    font-size: 10px;
+    margin: 4px 2px;
+    padding: 5px 35px;
+    
+    width: 100px; font-size: 13px";
+       
+    
+}

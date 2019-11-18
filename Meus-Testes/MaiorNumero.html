@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="maiorNumero.css">
      
     </head>
-        <title>Maior Numero</title>
+        <title>O Maior Número</title>
     <body>
+        <hr>
+            <h3> Programa para calcular o maior número.</h3>
+        </hr>
+        <h2>
+            <p>Digite a quantidade de números para a verificação.</p>
+        
+        
+       <input id="numero" name="numero" type="number" placeholder="Digite a quantidade" ></input>
 
-        <h3> Exibe o maior numero</h3>
-        <div>
-        <p>Digita a quantidade de numero da verificação</p>
-        </div>
-        <span name = "numeros" id="numeros">
-       <input id="num1" name="num1" type="number" placeholder="Digite o numero" class="numero-calculo">
+       
+            <button onclick="qntNumeros()" > Quantidade</button><br/><br/><output id="demo"></output>
+        </h2>
+       
+       
+        
+       <p id="resposta"></p> 
 
-        </span>
-
-        <button onclick="verificarMaior()"> Calcule</button>
-
-       <p>valores calculados são:</p>  <span id = "demo" > 
-
+       <span name = "numeros" id="numeros">
 
        </span>
       
        <script src="js/MaiorNumero.js"></script>
     </body>
 </html>
+
+
