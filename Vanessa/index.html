@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <link rel="icon" href="pru.icon" type="image/x-icon">
+    </head>
+        <title>Comissão</title>
+    <body>
+
+        <h1> Calculando as comições dos assegurados</h1>
+
+        <h3> Selecione as opções abaixo para o cálculo</h3>
+       <span> Selecione o código do produto:</span>
+           <select name="select">
+                <option value="valor11" id="valor1">WL10</option> 
+                <option value="valor22" id="valor2">WL25</option>
+                <option value="valor33" id="valor3">WL30</option>
+            </select>
+        <span> <br><br>Informe o capital assegurado</span>    
+        <input type = "number" name="capitalsegurado1" id ="capitalsegurado"><b>K</b><br><br>
+    
+        
+        <span> Informe o ano</span>
+            <select name="select" id = "select1">
+                <option value="ano1" id="ano2">1º Ano</option> 
+                <option value="ano2" id="ano3">2º Ano</option>
+                <option value="ano3" id="ano4">3º Ano</option>
+            </select>
+      
+
+            <button onclick=calcularvalor()> Calcule</button>
+
+       <p>valores calculados são:   
+        <b>
+       <span id="resultFinal" style="color: rgb(255, 72, 0);"></span>
+            </b>
+    </p>
+
+       <script src="js/form.js"></script>
+    </body>
+</html>
