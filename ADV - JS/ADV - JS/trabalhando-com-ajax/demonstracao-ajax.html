@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cinema Legal - Confira Informações dos Filmes</title>
+<link rel="stylesheet" href="estilo-site.css" />
+
+<script type="text/javascript" src="jquery.js"></script>
+
+<script>
+
+  $(document).ready(function(e) {
+      
+    $(".botao-fechar").on("click",function(){
+
+     $(".info").css("display","none");
+     $(".background-semi").css("display","none");
+          
+    });
+      
+      //define o evento onclick de todos os elevementos da classe "thumb_img"
+    $(".thumb_img").on("click", function(){
+      
+      //obtem dados do elemento pelo ID
+      var id_img= ($(this).attr("id"));
+      var nome_arquivo;
+
+      //verifica se o valor do id da image é igual ao thum_vingadores
+      if (id_img == "thumb_vingadores"){
+        nome_arquivo = "vingadores.xml" 
+
+      }else if (id_img =="thumb_deadpool2"){
+        nome_arquivo = "deadpool2.xml"
+
+      }else if (id_img == "thumb_han_solo"){
+        nome_arquivo = "han_solo.xml"
+      }
+
+      //Dispara o metodo post ( realiza uma chamada em ajax) 
+
+      //assim que o arquivo for carregado, o mesmo será processado dentro do corpo da função post = metodo ajax conteudo = caminho dos arquivos nome_arquivo = variavel atribuida acima
+      $.post("conteudo/" + nome_arquivo, function(data){
+
+        $arquivoXml = $(data);
+
+        //carregamos a imagem do cartaz do filme contido dentro da tag(node) "imagem" do objeto XML
+        //#img_cartaz = id src = caminho da imagem img/ = nome da pasta xml.find = nome da tag .text.= texto da tag
+        $("#img_cartaz").attr("src","img/"+$arquivoXml.find ("imagem").text());
+
+        //obtem as demais informações do filme dentro do xml
+        var nome = $arquivoXml.find("nome").text();
+        var direcao = $arquivoXml.find("direcao").text();
+        var producao = $arquivoXml.find("producao").text();
+        var ano = $arquivoXml.find("ano").text();
+        var sinopse = $arquivoXml.find("sinopse").text();
+        $("#out_nome_filme").html(nome);
+        $("#out_direcao").html(direcao);
+        $("#out_producao").html(producao);
+        $("#out_ano").html(ano);
+        $("#out_sinopse").html(sinopse);
+
+        //habilita a parte do html para a exibição das informações
+        $(".background-semi").css("display","block");
+        $(".info").css("display","block");
+  
+      });
+    });  
+  });
+
+</script>
+
+
+</head>
+
+<body>
+ <div style="background-image:url(img/faixa_roxa.png)" style="width:100%">
+  <img src="img/logo_cinema_legal.png"   />
+ </div>
+
+ <center>
+  <h2>
+    Selecione o Filme para obter mais informações
+  </h2>  
+ </center>
+ <div style="background-color:#ff9800" style="width:100%; height:30px">
+   &nbsp;
+ </div>
+ 
+ <div class="thumb_container">
+ <center>
+ 
+   <div class="thumb_box">
+    <center>
+      <img class="thumb_img" src="img/thumb_vingadores.jpg" id="thumb_vingadores" /><br />
+      Vingadores <br />
+      Guerra Infinita
+    </center>  
+   </div>
+   
+   <div class="thumb_box">
+    <center>
+      <img class="thumb_img" src="img/thumb_deadpool2.jpg" id="thumb_deadpool2" /><br />
+      Deadpool <br/>2<br />
+    </center>  
+   </div>
+   
+   <div class="thumb_box">
+    <center>
+      <img class="thumb_img" src="img/thumb_han_solo.jpg" id="thumb_han_solo" /><br />
+      Han Solo <br/>Uma História Star Wars<br />
+    </center>  
+   </div>
+ </center>
+ </div>
+ 
+ <div class="background-semi">
+ 
+   
+ 
+ </div>
+ 
+ <div class="info">
+   <br />
+   <center>
+     <div class="info-movie">
+        <div class="info-movie-image">
+          
+           <img src="" id="img_cartaz" />
+        
+        </div>
+        <div class="info-movie-data">
+           <center>
+               <button class="botao-fechar">Fechar</button>
+           </center> <br /><br />
+           <span>Nome do Filme: </span><output id="out_nome_filme"></output><br /><br />
+           <span>Direção: </span><output id="out_direcao"></output><br /><br />
+           <span>Produção: </span><output id="out_producao"></output><br /><br />
+           <span>Ano: </span><output id="out_ano"></output><br /><br /><br />
+           <span>SINOPSE</span><br />
+           <p align="justify">
+             <output id="out_sinopse"></output>
+           </p>
+           
+           
+        </div>
+     </div>
+   </center>  
+ </div>
+ 
+ 
+</body>
+</html>

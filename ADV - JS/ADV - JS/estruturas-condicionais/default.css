@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+body
+{
+	font-family: 'Open Sans', sans-serif;
+    background:#CCC;	
+}
+.button {
+    background-color: #fcc014;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#top {
+	
+	padding: 5px;
+	width:90%;
+	margin: 20px auto;
+	border: none;
+   -webkit-box-shadow: 3px 2px 5px -3px rgba(0,0,0,0.72);
+   -moz-box-shadow: 3px 2px 5px -3px rgba(0,0,0,0.72);
+    box-shadow: 3px 2px 5px -3px rgba(0,0,0,0.72);
+    background:#f5f4f2;
+
+}
+
+#top span
+{
+	position:relative;
+	top:-20px;
+	font-size:20px; 
+	font-weight:bold;
+   	
+}
+
+
+#box
+{
+	
+	display:table;	
+	width:90%;
+	border: none;
+   -webkit-box-shadow: 3px 2px 5px -3px rgba(0,0,0,0.72);
+   -moz-box-shadow: 3px 2px 5px -3px rgba(0,0,0,0.72);
+    box-shadow: 3px 2px 5px -3px rgba(0,0,0,0.72);
+    background:#F5F5F5;	
+	text-align:left;	
+	
+}
+
+#box-dados
+{
+   padding-left:15px;
+   padding-right:15px;	
+}
+
+output, p
+{
+   color:#0380fb;	
+}
+
+hr { 
+
+ 
+ border: 1px #999 solid;
+
+}
+
+input[type=text], select
+{
+   width:95%;
+   max-width:100px;
+   line-height:20px;
+   height:25px;
+   border: 1px solid #AAA;
+   font-size:14px;
+   color:#444;
+   text-indent:5px;
+   outline:medium none;
+   margin: 0px 10px;
+}
+
+
+
+ 

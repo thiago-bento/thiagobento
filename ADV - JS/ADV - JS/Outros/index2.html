@@ -1,0 +1,53 @@
+<html>
+
+    <head>
+
+        <title> Javascript</title>
+        <style>
+        
+        body { 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            background-color: #fcc014;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        output {
+        
+            font-size: 14px;
+            color: #06f;
+        }
+        </style>
+
+        <script>
+                
+            function mostrarMensagem(){
+                document.getElementById("mensagem").innerHTML = " Estou aprendendo";
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        
+    <h3> Mostrando mensagem em Js </h3>
+
+    <span><strong> Mensagem:</strong></span> <output id = "mensagem"></output> <br /><br />
+
+    <button onclick="javascript:mostrarMensagem()"> Mostrar</button>
+        
+    </body>
+    
+</html>

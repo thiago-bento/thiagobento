@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demonstração Canvas 1</title>
+<style>
+
+  body
+  {
+	 font-family:"Verdana";
+	 background-color:#eee;  
+  }
+  
+</style>
+<script>
+
+window.onload = function(){
+  var canvas = document.getElementById("tela");
+  var context = canvas.getContext ("2d"); //carrega o objeto em 2d
+  var imgMenina = new Image(); //variavel para uma nova imagem
+   
+  imgMenina.onload = function(){
+
+    context.drawImage (imgMenina,350,200,110,120); 
+  }
+  imgMenina.scr = 'menina.png';
+
+  context.font = "30px Comic Sans MS";
+
+  context.fillStyle = "#ff5722";
+
+  context.fillText ("Desenho em Canvas",50 ,50);
+
+  context.fillStyle = "#b71c1c"; //preenche a cor
+  context.fillRect (20,80,200,100); /// retangulo
+
+  //Circulo
+  context.beginPath();
+  context.arc(350,230,70,0,2 * Math.PI);
+  context.fillStyle = "#FBC02D";
+  //preencher o circulo
+  context.fill();
+  context.lineWidth =6;
+  context.strokeStyle = "#4E342E";
+  context.stroke();
+
+  //Linha
+
+  context.beginPath();
+  context.moveTo (30,300);
+  context.lineTo(400,400);
+  context.lineWidth=8;
+  context.strokeStyle = "#2E7D32";
+  context.stroke();
+}
+
+</script>
+</head>
+
+<body>
+   <center>
+      <h2>
+        Demonstração do uso do Canvas
+      </h2>
+      
+      <br />
+      
+      <canvas id = "tela" width="800" height="480" style="background-color:#fff"></canvas>
+     
+   </center>
+</body>
+</html>

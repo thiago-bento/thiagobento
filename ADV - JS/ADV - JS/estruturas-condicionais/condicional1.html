@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Situação do Aluno</title>
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Open+Sans:400,300,600,700,800" rel="stylesheet" />      
+        <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+        
+        <style>
+		 
+		   .aprovado { color:#090; }
+		   .reprovado { color:#F30; }
+		
+		</style>
+      
+      <script>
+        function obterDatos(){
+          
+          nomeAluno = document.getElementById("nome").value;
+          mediaAluno = document.getElementById("media").value;
+
+          outNomeAluno = document.getElementById ("nome_aluno");
+          spanSituacao = document.getElementById("situacao");
+           
+          if (mediaAluno >=7){
+
+            spanSituacao.innerHTML = "Foi aprovado";
+            spanSituacao.className = "aprovado"
+          }else{
+              spanSituacao.innerHTML = "Foi reprovado";
+              spanSituacao.className = "reprovado"
+            }
+
+          outNomeAluno.innerHTML = nomeAluno;
+        }
+
+      </script>
+
+
+
+    </head>
+
+    <body>
+     <center>
+      <div id="top">
+     
+        <img src="icone-js.png" /> &nbsp;<span>Situação do Aluno</span>
+        
+      </div>
+  
+      <div id="box">
+         
+        <div id="box-dados">
+        
+          <br /> 
+         
+             <h3>Informe os dados do Aluno</h3> <br />
+             Digite o nome: <input type="text" id="nome" name="nome" /> <br /><br />
+             Informe a média: <input type="text" id="media" name="media" style="max-width:100px !important" /> <br /><br />
+             
+             <hr />
+             
+             <h4><u>Situação</u></h4> 
+             <strong>Nome do Aluno:</strong> <output id="nome_aluno"></output><br /><br />
+               
+             <strong>Situação:</strong> <span id="situacao" ></span> 
+              
+             <br />
+             <br />
+              
+             <hr />
+          
+             <button class="button" onclick="javascript:obterDatos()">Mostrar Situacao</button><br /><br />
+          
+        
+         
+        </div>
+     
+      </div>
+     </center>   
+    </body>
+</html>

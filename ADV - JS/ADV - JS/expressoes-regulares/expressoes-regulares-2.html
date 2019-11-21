@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Expressão Regular (Exercicio 2)</title>
+<link rel="stylesheet" href="estilo-form.css" />
+</head>
+<body>
+<center>
+ <div class="form-cadastro">
+   <h3>Cadastro de usuário</h3>
+   <div style="padding-left:10px">
+       <span>Digite seu nome:</span>
+       <input type="text" name="nome" id="nome" /><output id="msg_nome"></output><br /><br />
+       <span>Data de Nascimento:</span>
+       <input type="text" name="data_nasc" id="data_nasc" style="max-width:100px" /><output id="msg_data_nasc"></output><br /><br />
+       <span>Digite seu email:</span>
+       <input type="text" name="email" id="email" /><output id="msg_email"></output><br /><br />
+       <span>Digite seu endereço:</span>
+       <input type="text" name="endereco" id="endereco" /><output id="msg_endereco"></output><br /><br />
+       <span>Cep:</span>
+       <input type="text" name="cep" id="cep" style="max-width:100px" /><output id="msg_cep"></output><br /><br />
+       <span>Cidade:</span>
+       <input type="text" name="cidade" id="cidade" /><output id="msg_cidade"></output><br /><br />
+       <span>UF:</span>
+       <input type="text" name="uf" id="uf" style="max-width:30px"  /><output id="msg_uf"></output><br /><br />
+   </div>
+   <hr />
+   <br />
+   <div align="center">
+      <button onclick="validaDados()">Validar</button>
+   </div>
+   <br /><br/>
+ </div>
+</center> 
+<script src="js/expressao.js"></script>
+</body>
+</html>

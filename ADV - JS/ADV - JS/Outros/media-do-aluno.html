@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculando a Média do Aluno</title>
+
+ <style>
+ 
+   body { font-family:Verdana;}
+   
+   span { font-size:14px;}
+   output { font-size:14px; }
+   
+   button {	   
+	background-color: #fcc014;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+	cursor:pointer;   	   
+   }   
+   
+   input[type=text]
+   {
+	   width:95%;
+	   max-width:400px;
+	   line-height:20px;
+	   height:25px;
+	   border: 1px solid #AAA;
+	   font-size:14px;
+	   color:#444;
+	   text-indent:5px;
+	   outline:medium none;
+	   margin: 0px 10px;
+   }
+   
+   .nota { max-width:200px !important; }
+ 
+ </style>
+   <script>
+      function calculaMedia(){
+         nomeCompleto = document.getElementById("nome").value;
+         notaP = Number(document.getElementById ("nota_portugues").value);
+         notaM = Number(document.getElementById("nota_matematica").value);
+         notaG = Number(document.getElementById("nota_geografia").value);
+         notaH = Number(document.getElementById("nota_historia").value);
+
+         var media = (notaP + notaM + notaG + notaH)/4;
+         
+         document.getElementById ("resultado").innerHTML = nomeCompleto + "Sua média foi " + media.toFixed(2);
+      }
+   
+   </script>
+
+ 
+ 
+</head>
+
+<body>
+
+   <h3>Calculando a Média do Aluno</h3><br /><br />
+
+   <span>Digite seu nome:</span>
+   <input type="text" id="nome" name="nome" /> <br /> <br />
+   
+   <span>Nota de português:</span>
+   <input class="nota" type="text" id="nota_portugues" name="nota_portugues" /> <br /> <br />
+
+   <span>Nota de matemática:</span>
+   <input class="nota" type="text" id="nota_matematica" name="nota_matematica" /> <br /> <br />
+
+   <span>Nota de geografia:</span>
+   <input class="nota" type="text" id="nota_geografia" name="nota_geografia" /> <br /> <br />
+
+   <span>Nota de história:</span>
+   <input class="nota" type="text" id="nota_historia" name="nota_historia" /> <br />  <br />
+  
+   <span><strong>Situação:</strong></span>
+
+   <output id="resultado"></output> <br /><br />
+   
+<button onclick="javascript:calculaMedia()"> Mostrar Média</button>
+  
+</body>
+</html>

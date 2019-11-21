@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calculadora</title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Open+Sans:400,300,600,700,800" rel="stylesheet" />      
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+<body>
+     <center>
+      <div id="top">
+     
+        <img src="icone-js.png" /> &nbsp;<span>Calculadora</span>
+        
+      </div>
+  
+      <div id="box">
+         
+        <div id="box-dados">
+        
+          <br />
+                     
+             Primeiro Número <input type="text" id="numero1" name="numero1" /> <br /><br />
+             Operação 
+             <select id="operacao" name="operacao">
+               <option value="1" selected="selected">Adição</option>
+               <option value="2">Subtração</option>
+               <option value="3">Multiplicação</option>
+               <option value="4">Divisão</option>
+             </select> 
+             <br /><br />
+             Segundo Número <input type="text" id="numero2" name="numero2" /> <br /><br />
+             
+             <hr />
+             
+             <button class="button" onclick="calcular()">Calcular</button><br /><br />
+             
+             
+             <strong>Resutado:</strong> <output id="resultado"></output><br /><br />
+               
+             
+        
+         
+        </div>
+     
+      </div>
+     </center>
+     <script src="js/JavaScript.js"></script>   
+    </body>
+</html>

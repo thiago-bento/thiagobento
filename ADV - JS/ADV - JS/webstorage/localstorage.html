@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>localStorage - WebStorage</title>
+<link rel="stylesheet" href="estilo.css" />
+
+<script>
+
+window.onload = function (){
+      if(!localStorage.registrado){
+         document.getElementById("box-registro").style.display = "block";
+      }else{
+         document.getElementById("box-consulta").style.display = "block";
+         document.getElementById("out_nome").innerHTML = localStorage.nome;
+         document.getElementById("out_nome").innerHTML = localStorage.idade;
+      }
+}
+
+function cadastrar(){
+
+   localStorage.nome = document.getElementById("nome").value;
+   localStorage.idade = document.getElementById("idade").value;
+   document.getElementById("out_nome").innerHTML = localStorage.nome;
+   document.getElementById("out_nome").innerHTML = localStorage.idade;
+
+   alert("dados cadastrados");
+
+   localStorage.registrado = true;
+   document.getElementById ("box-registro").style.display = "none";
+   document.getElementById ("box-consulta").style.display = "block";
+}
+
+function limpar(){
+   localStorage.clear();
+   alert ("dados eliminados");
+   document.getElementById ("box-registro").style.display = "block";
+   document.getElementById ("box-consulta").style.display = "none";
+}
+
+</script>
+
+</head>
+
+<body>
+ <h3>localStorage - Demonstração</h3>
+ 
+ <div class="box-azul" id="box-registro">
+  <h1>Informe seus dados</h1> <br />
+  <span>Nome: </span> <input type="text" name="nome" id="nome" /> &nbsp;
+  <span>Idade: </span> <input type="text" name="idade" id="idade" /> <br /><br />
+  <center>
+     <button onclick="cadastrar()" >Cadastrar</button>
+  </center>   
+  
+ </div>
+ <br/>
+ <div class="box-verde" id="box-consulta">
+  <h1>Você já está registrado</h1> <br />
+  <span>Nome: </span> <output id="out_nome">Nome</output> &nbsp;
+  <span>Idade: </span> <output id="out_idade">Idade</output> <br /><br />
+  <center>
+     <button onclick="limpar()" >Limpar</button>
+  </center>
+  
+  
+ </div>
+ 
+ <!-- <script type="text/javascript" src="localstorage.js"></script> -->
+ 
+ 
+</body>
+</html>

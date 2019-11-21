@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Depurando Erros</title>
+
+ <style>
+    body { font-family:Verdana; }
+	span { font-size:14px; }
+ </style>
+
+</head>
+
+<body>
+  <h3>Depurando Erros</h3>
+  <script>		  
+    var nome = "Rafael"; //Crio uma variável "string"
+    sobrenome = "Zé";
+    idade = 25; //Crio uma variável "number"
+    formacao_academica = true; //Cria uma variável "boolean"
+    formacoes = ['Marketing','Direito']; //Cria um objeto "array"
+
+    /* Imprime os dados na tela */			
+    document.write("<span> Meu nome é: " + nome + "</span><br/>");
+	  document.write("<span> Meu sobrenome é: " + sobrenome + "</span><br/>");
+    document.write("<span> Minha idade: " + idade + "</span><br/>");
+    document.write("<span> Tenho formações: " + formacao_academica +    
+    "</span><br/><br/>");
+
+    document.writeln("<span><strong>Lista de minhas formações</strong></span><br/>");
+    document.write("<span>" + formacoes[0] + "</span><br/>");
+    document.write("<span>" + formacoes[1] + "</span><br/>");					  
+ </script>     
+
+
+</body>
+</html>

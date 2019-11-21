@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Expressão Regular (Exercicio 1)</title>
+<link rel="stylesheet" href="estilo.css" />
+<script>
+function validarCep (){ 
+   /* Expressão regurar para validar um padrão -> */
+   var regraCep = /^[0-9]{5}\-[0-9]{3}/;   //21833-070 Ex
+
+   cep = document.getElementById("cep").value;
+
+   if(cep.trim().length > 0){
+      if(regraCep.test(cep)){
+         alert("cep validado");
+            
+      }else{
+         alert("Cep invalido");
+      } 
+   }else{
+         alert ("Precisa informar um cep");
+      }
+   
+}
+
+
+</script>
+</head>
+
+<body>
+
+  <h3>Expressão Regulares - Exercício 1</h3>
+  <div class="box-cep" >
+  <h1>Informe o CEP</h1> <br />
+  <span>CEP: </span> <input type="text" name="cep" id="cep" /> &nbsp;
+   <br /><br />
+  <center>
+     <button onclick="validarCep()">Validar</button>
+  </center>   
+  
+ </div>
+</body>
+</html>

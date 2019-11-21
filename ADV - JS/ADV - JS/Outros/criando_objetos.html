@@ -1,0 +1,65 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Usando Objeto</title>
+<style>
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+</style>    
+
+<body>
+    <h3>Criando Metodos em Objetos</h3>
+<script>
+
+  
+    
+  /* 1ª Forma de criar um obejto atribundo valores na variavel definida
+    var carro = new Object();
+    carro.ano = 2018 ;
+    carro.cor = "vermelha";
+    carro.fabricante = "fiat";
+    carro.num_portas = 4;
+    carro.arCondicionar = "Sim";
+
+    \\Mostrando os valores
+    document.writeln("O ano do carro é : "+carro.ano + "<br />");
+    document.writeln("A cor do carro é : "+carro.cor+"<br />");
+    document.write("O fabricante é : "+carro.fabricante+ "<br />");
+    document.write("O numero de postas são : "+carro.num_portas+"<br />");
+    document.write("O numero de postas são : "+carro.arCondicionar+"<br />");
+
+    */
+
+    // outra forma atribuindo os valores
+
+    var carro ={ ano: 2012, cor:"vermelha", fabricante:"fiat", num_portas:4, arCondicionar: "Sim" };
+
+    document.writeln ("ano do carro é: " + carro.ano  +"<br/>" + "cor do carro: "+carro.cor+ "<br/>")
+
+    function acelerar (){
+
+        document.writeln ("Acelerando..."+ "<br/>");
+    }
+
+    function mudarMarcha (numMarcha){
+        document.writeln ("Troca a marcha "+ numMarcha+ "<br/>");
+
+    }
+
+    acelerar();
+    mudarMarcha(5);
+
+</script>
+
+</body>
+
+
+
+</head>
+
+                
+
+
+
+</html>

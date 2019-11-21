@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Instalação do jQuery</title>
+<style>
+
+  body {
+	font-family:"Verdana";  
+  }
+  
+  h1 { 
+    width: 100%;
+	height:60px;
+	background-color:#F60;
+	padding-top:10px;
+	color:#fff;
+	text-align:center;
+  }
+
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+  <script>
+      window.onload = function(){
+  
+        $("#out_status").html("Instalado");
+ 
+   if (window.jQuery){
+ 
+    out_status.innerHTML = "Instalado";
+ 
+   }else{
+     out_status.innerHTML = "Não instalado";
+   
+   }
+} 
+  </script>   
+
+
+</head>
+<body>
+
+<h1>Instalação do jQuery</h1>
+ <center>
+      <h2>Status : <output id="out_status"></output></h2>   
+ </center>
+   
+</body>
+</html>

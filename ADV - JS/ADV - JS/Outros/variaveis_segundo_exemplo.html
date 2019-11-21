@@ -1,0 +1,67 @@
+<html>
+   <head>
+        <style>
+
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            output {
+                font-size: 14px;
+                color: black;    
+            }
+
+            button {
+
+                background-color: #fcc014;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            input [type = text] {
+                width: 95%;
+                max-width: 400px;
+                line-height: 20px;
+                height: 25px;
+                border: 1px solid #AAA;
+                font-size: 14px;
+                color: #444;
+                text-indent: medium none;
+                outline: medium none;
+                margin: 0px 10px;
+            }
+
+        </style>
+
+        <script>
+        
+        function mostraNome (){
+        
+            var nomeCompleto = document.getElementById("nome").value; //pega o valor digitado no imput e atribui a variavel.
+            
+            document.getElementById("resultado").innerHTML = "Meu nome é: " + nomeCompleto;
+            
+        }
+        </script>
+
+    </head>
+   
+    <body>
+
+        <h3> Segundo exemplo com Variáveis</h3>
+        <span> Digite seu nome: </span>
+        <input type="text" id = "nome" name="nome" /> <br /> <br />
+        <button onclick= "javascript:mostraNome()"> Mostrar Nome: </button> <br /> <br />
+        <output id = "resultado"></output>
+
+    </body>
+</html>

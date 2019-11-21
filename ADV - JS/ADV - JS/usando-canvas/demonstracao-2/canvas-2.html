@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demonstração Canvas 2</title>
+<style>
+
+  body
+  {
+	 font-family:"Verdana";
+	 background-color:#eee;  
+  }
+  
+</style>
+<script>
+
+window.onload = function (){  //funcao para so mostrar os elementos quando a pagina estiver 100% carregada
+
+  var canvas = document.getElementById("tela"); // variavel para o id do Cavas no html
+  var context = canvas.getContext("2d"); // variavel para atrubuir a tela do canvas.
+
+  var imgCeu = new Image(); //variavel de uma nova imagem
+  var imgChao = new Image();
+  var imgRochas = new Image();
+  var imgMenina = new Image();
+
+  imgCeu.onload = function (){ //funcao para carregar a imagem
+    context.drawImage (imgCeu, 0,0,800,480); //atribui a tela o tamanho da imagem
+    
+    imgChao.onload = function (){
+      context.drawImage (imgChao, 0,417,800,73);
+
+      imgRochas.onload = function (){
+        context.drawImage (imgRochas, 250,169,125,249);
+        context.drawImage (imgRochas, 600,169,125,249);
+
+        imgMenina.onload = function (){
+          context.drawImage (imgMenina, 400,319,90,98);
+
+        }
+        imgMenina.src = 'menina.png';
+
+      }
+      imgRochas.src='rochas.png';
+    }
+    imgChao.src = 'chao.png';
+  }
+  imgCeu.src='ceu_com_nuvens.png';
+
+}
+
+</script>
+ 
+</head>
+
+<body>
+   <center>
+      <h2>
+        Criando cenários com Canvas
+      </h2>
+      
+      <br />
+      
+      
+    <canvas id="tela" width="800" height="480" style="background-color: azure;" > </canvas>
+
+     </center>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Trabalhando com Eventos</title>
+<style>
+
+  body { font-family:Verdana; }
+  input[type=text]
+   {
+	   width:95%;
+	   max-width:450px;
+	   line-height:20px;
+	   height:25px;
+	   border: 1px solid #AAA;
+	   font-size:14px;
+	   color:#444;
+	   text-indent:5px;
+	   outline:medium none;
+	   margin: 0px 10px;
+   }
+   
+   hr { border: 1px #333 solid; }
+   .azul { color:#39F; }
+   .negrito { font-weight:bold; }
+
+</style>
+
+</head>
+<script>
+	function mostrarConteudo(){
+		var nome = document.getElementById ("nome").value;
+		document.getElementById("out_nome").innerHTML = nome;
+	}
+
+
+
+
+</script>
+<body>
+ <h3>Trabalhando com Eventos - Exemplo 1</h3>
+ <hr />
+ <span>Digite seu nome:</span> <input type="text" id="nome" name="nome"  oninput="javascript:mostrarConteudo()"/><br /><br />
+ <span>Nome Digitado:</span><output class="azul negrito" id="out_nome" /> 
+</body>
+</html>
