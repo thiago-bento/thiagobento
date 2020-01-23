@@ -11,7 +11,28 @@ xrh.open ("GET", "http://api-pacientes.herokuapp.com/pacientes");
 
 xrh.addEventListener("load", function() {
 
-    console.log(xrh.responseText);
+    var erroAjax = document.querySelector("#erro-ajax");
+        if (xrh.status == 200) {
+            erroAjax.classList.add("invisivel");
+
+
+var resposta = xrh.responseText;
+console.log(resposta);
+console.log(typeof resposta);
+
+
+var pacientes = JSON.parse(resposta);
+
+    pacientes.forEach(function(paciente){
+        adicionaPacienteNaTabela(paciente);
+        
+    });
+}else{
+
+    console.log (xrh.status);
+    console.log (xrh.responseText);
+    erroAjax.classList.remove("invisivel");
+}
 });
 
 xrh.send();
