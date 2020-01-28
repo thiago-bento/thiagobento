@@ -25,3 +25,7 @@ campoFiltro.addEventListener ("input", function(){
         }
     }    
 });
+
+
+
+http://api-pacientes.herokuapp.com/pacientes
