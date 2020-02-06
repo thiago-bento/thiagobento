@@ -59,6 +59,13 @@
         </tfoot>
     </table>
     
-    <script src = "js/index.js"> </script>
+    <script src = "js/app/models/Negociacao.js"> </script>
+    
+    <script>
+    var v1 = new Negociacao(new Date (), 5, 700);
+    var volume = v1.obtemVolume();
+    console.log (volume);
+
+    </script>
 </body>
 </html>
