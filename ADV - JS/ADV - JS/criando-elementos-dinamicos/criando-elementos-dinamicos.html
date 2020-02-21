@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="stylesheet" href="estilo.css">
+ <title>Criando Elementos Dinâmicos</title>
+ 
+ 
+ 
+</head>
+
+<body>
+ <h3>Criando Elementos Dinâmicos</h3>
+ <hr />
+ <p>Escolha o elemento a ser criado</p> <br />
+ <input type="radio" name="opcao" id="opcao_span" value="span" checked="checked" />&lt;span&gt; &nbsp;
+ <input type="radio" name="opcao" id="opcao_button" value="button"  />&lt;button&gt; &nbsp;
+ <input type="radio" name="opcao" id="opcao_input" value="input" />&lt;input type="text" &gt; &nbsp; &nbsp;
+ <button onclick="javascript:criarElemento()" class="amarelo" >Criar Elemento</button>
+ <button onclick="javascript: apagaElementos()" class="vermelho" >Apagar Todos os Elementos</button>
+ <hr />
+ <div id="container"></div>
+
+<script type= "text/javascript" src="js/criandoelementosdinamicos.js"></script>
+
+</body>
+</html>

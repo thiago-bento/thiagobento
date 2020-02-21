@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Trabalhando com caixas de diálogo</title>
+<style>
+  body { font-family:Verdana;}
+  button {	   
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor:pointer;   	   
+  }   
+		  
+  button.amarelo {
+	background-color: #FC0;  
+  }
+  button.vermelho {
+	background-color: #C00;  
+  }
+  button.verde {
+	background-color: #063;  
+  }
+  
+  p, span { font-size:16px; }
+  
+  .azul { color:#06F; }
+  .negrito { font-weight:bold; }
+</style>
+
+<script>
+
+  function mostrarAlerta (){
+
+    alert ("Isto é um alerta");
+  }
+
+  function mostrarPrompt (){
+    var inNome = document.getElementById ("spn_nome")
+    var msgPrompt = prompt ("Digite nome");
+    inNome.innerHTML = msgPrompt;
+  }
+
+  function usaConfirm(){
+       
+        var usarConfirm = confirm("Voce realmente deseja sair da tela?");
+        var inConfirm = document.getElementById ("spn_resposta");
+        
+        if (usarConfirm){
+          inConfirm.innerHTML = "Saiu da tela";
+          
+        }else{
+          
+          inConfirm.innerHTML = "Calcelou";
+        }
+  }
+
+</script>
+
+</head>
+
+<body>
+ <h3>Trabalhando com caixas de diálogo</h3>
+ <hr />
+ <strong><span>Usando o alert</span></strong>
+ <br />
+ <button onclick="javascript:mostrarAlerta()" class="amarelo">Mostrar Mensagem</button>
+ <br />
+ <hr />
+ <strong><span>Usando o prompt</span></strong>
+ <br />
+ <button onclick="javascript:mostrarPrompt()" class="vermelho">Informar nome</button><br /><br />
+ <span>Nome:</span><span class="azul negrito" id="spn_nome" ></span>
+ <br />
+  <br />
+ <hr />
+ <strong><span>Usando o confirm</span></strong>
+ <br />
+ <button onclick="javascript:usaConfirm()" class="verde">Confirmar pergunta</button><br /><br />
+ <span>Resposta:</span><span class="azul negrito" id="spn_resposta" ></span>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Trabalhando com Vetores</title>
+        
+        <style>
+		  body { font-family:Verdana;}
+		  button {	   
+	        border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+	        cursor:pointer;   	   
+          }   
+		  
+		  button.amarelo {
+			background-color: #FC0;  
+		  }
+		  button.vermelho {
+			background-color: #C00;  
+		  }
+		  button.verde {
+			background-color: #063;  
+		  }
+		  
+		  input[type=text]
+	      {
+			   width:100px;
+			   line-height:20px;
+			   height:25px;
+			   border: 1px solid #AAA;
+			   font-size:14px;
+			   color:#444;
+			   text-indent:5px;
+			   outline:medium none;
+			   margin: 0px 10px;
+		  }
+		  
+		  .azul { color:#06F; }
+		  .negrito { font-weight:bold; }
+		  
+		
+		</style>
+        
+        
+    </head>
+    <script>
+
+		var valores = [];
+
+		function apagarMsg (){
+
+			var span_msg = document.getElementById ("mensagem"); //obtem dados do ID da mensage
+				span_msg.innerHTML = ''; //Insere um valor vazio no ID
+		}
+
+		function adicionarValor (){
+			var inputValor = document.getElementById ("valor") ; //pega a referencia od ID
+			var valor = inputValor.value; // atribui a referencia na variavel
+			valores.push(valor) //adiciona o valor no array
+
+			inputValor.value = ""; //insere o valor vazio dendro do ID
+
+			var span_msg = document.getElementById ("mensagem");
+
+			span_msg.innerHTML = "O valor "+valor+ " foi adicionado com sucesso!";
+
+			setTimeout( "apagaMsg()", 1500);		
+			
+		}
+
+		function motraValores (){
+			divResultado = document.getElementById ("resultado");
+			divResultado.innerHTML = "";
+		
+			if (valores.length == 0){
+				var span_msg = document.getElementById ("mensagem");
+				span_msg.innerHTML = "O vetor está vazio";
+				setTimeout("apagarMsg()",1500);
+			}else{
+				var saida = '';
+				for (i=0 ; i < valores.length; i++){
+					saida +="<p>"+valores[i]+ "<p>";
+				}
+				divResultado.innerHTML = saida;
+			}
+		
+		}
+
+		function removerUltimoElemento (){
+
+			var span_msg = document.getElementById ("mensagem");
+
+			if (valores.length == 0){
+					var span_msg = document.getElementById ("mensagem");
+					span_msg.innerHTML = "O vetor está vazio";
+					setTimeout("apagarMsg()",1500);
+			}else{
+				valorRemovido = valores.pop();
+				span_msg.innerHTML = "Valor removido = "+ valorRemovido;
+				setTimeout("apagarMsg()",1500);
+			}
+		}	
+
+
+
+
+
+	</script>
+    <body>
+         <h3>Trabalhando com Vetores</h3>
+         <hr /> <br />
+         <span>Informe um valor</span>&nbsp; <input type="text" name="valor" id="valor" /> <br /><br />
+         
+         <button onclick="javascript:adicionarValor()" class="amarelo">Adicionar</button> &nbsp; 
+         <button onclick="javascript:removerUltimoElemento()" class="vermelho">Remove último elemento</button> &nbsp;
+         <button onclick="javascript:motraValores()" class="verde">Mostrar Todos Elementos</button>
+         <br /><br />
+         <span>Status</span> : <span class="azul negrito" id="mensagem"></span>
+         <br /><br />
+         <hr /> <br />
+         <div id="resultado" class="negrito">
+          
+         </div>
+        
+    </body>
+</html>

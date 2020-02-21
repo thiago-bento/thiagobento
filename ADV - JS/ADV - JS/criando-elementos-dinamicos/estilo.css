@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body { font-family:Verdana; }
+
+button {	   
+	        border: none;            
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+	        cursor:pointer;   	   
+}   
+		  
+button.amarelo {
+  background-color: #FC0;  
+  color: white;
+}
+button.vermelho {
+			background-color: #C00; 
+			color: white; 
+}
+
+hr { background-color:#333; border: 1px #000000 solid }
+
+span { font-weight:bold; color:#39F; }
+

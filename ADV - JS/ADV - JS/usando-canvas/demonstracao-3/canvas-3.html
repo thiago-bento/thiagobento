@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demonstração Canvas 3</title>
+<style>
+
+  body
+  {
+	 font-family:"Verdana";
+	 background-color:#eee;  
+  }
+  
+</style>
+
+<script>
+
+  //Evento que será executado após a página ser carregada por completo
+  window.onload = function()
+  {
+	  var canvas = document.getElementById("tela");
+	
+	  var context = canvas.getContext("2d");
+    
+    var totalImagens = 12;
+    var conta_imagens = 0;
+
+    var imgCeu = new Image();
+    var imgChao = new Image();
+
+    var animacaoMenina = [];
+    var posx_chao1 =0;
+    var posx_chao2 = 800;
+    var indexAnimacao = 0;
+
+    var posMenins = 0;
+    var posY=319;
+    
+    //anicai com vetor
+    for (i=1 ; i<=10 ; i++){
+      animacaoMenina.push(new Image());
+      animacaoMenina[i-1].onload = function (){
+
+        conta_imagens++
+        iniciarAnimacao();
+      }
+      animacaoMenina[i-1].src = 'menina_andando_'+ i + '.png';
+    }
+
+    //carrega a imagem do ceu
+    imgCeu.onload = function (){
+
+      conta_imagens++;
+      iniciarAnimacao();
+    }
+    imgCeu.src = 'ceu_com_nuvens.png';
+
+    //carrega imagem chao
+    imgChao.onload = function (){
+      
+      conta_imagens++;
+      iniciarAnimacao();
+    }
+    imgChao.src = 'chao.png';
+    
+    //funcao pra iniciar a animação
+    function iniciarAnimacao(){
+      if (conta_imagens==totalImagens){
+        setInterval(UpdateAnimacao,35);
+
+      }
+      
+    }
+
+  function UpdateAnimacao(){
+    context.fillStyle = "#FFFFFF";
+    context.fillRect (0,0,800,480); // limpa a tela
+    context.drawImage (imgCeu,0,0,800,480); // desenha o ceu
+    context.drawImage (imgChao, posx_chao1,417,800,73); //desenha o chao
+    context.drawImage (imgChao, posx_chao2,417,800,73); //desenha o chao
+    posx_chao1-=6;
+
+    if (posx_chao1 <-800){
+      posx_chao1 = 790;
+    }
+
+    posx_chao2 -=6;
+    if (posx_chao2 <-800){
+      posx_chao2 =790;
+    }
+    
+    // meninaandando na tela
+    context.drawImage(animacaoMenina[indexAnimacao],posMenins,posY,90,98);
+
+    //atualiza o indice
+    indexAnimacao++;
+
+    if(indexAnimacao > 9){
+      indexAnimacao = 0; //reinicia a posição da animaçao
+      posMenins+=8 
+      posY-=5 ;
+  }
+
+  }
+
+    
+
+
+
+
+
+
+  }
+
+</script>
+
+</head>
+
+<body>
+   <center>
+      <h2>
+        Animação com Canvas
+      </h2>
+      
+      <br />
+      
+      <canvas id="tela" width="800" height="480" style="background-color:#fff"></canvas>
+     
+   </center>
+</body>
+</html>
+

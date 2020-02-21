@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Demonstração : Geolocalização</title>
+    
+    <script type="text/javascript"   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbyXbHu0Kqj70Gi21O_iCyQDKCcEES6Qw&callback=teste"></script>
+    <script type="text/javascript" src="gelolocalizacao.js"></script>
+    
+</head>
+
+<body >
+  <center>
+   <div class="container">
+     <h3>Geolocalização</h3>
+    
+     <center><h4 >Dados da Localização</h4></center>
+     <div class="subcontainer">
+     
+      <div class="dados-geolocalizacao">
+         <span>Latitude: </span><output id="out_latitude" > </output><br /><br />
+         <span>Longitude: </span><output id="out_longitude"> </output><br /><br />
+         <span>Altitude: </span><output id="out_altitude"> </output><br /><br />
+         <span>Precisão: </span><output id="out_precisao"> </output><br />  <br />     
+         <span>Precisão de autitude: </span><output id="out_precisao_altitude"> </output><br /><br />
+         <span>Direcao: </span><output id="out_direcao"> </output><br /><br />
+         <span>Velocidade: </span><output id="out_velocidade"> </output><br /><br />
+         <span>Tempo: </span><output id="out_tempo"> </output><br /> <br /><br />
+         
+         <div class="container-buttons">
+         	<center>
+         
+              <button onclick="javascript:mapaEstatico(posicao)">Mapa Estático</button>
+              
+              <button onclick="javascript:mapaDinamico(mPosicao)">Mapa Dinâmico</button>
+                           
+        	</center>     
+         </div>
+         
+      </div>
+      
+      <div id="gmaps">
+        
+      </div>
+      
+     <br />
+     
+     </div>
+     <br /><br /><br />
+   </div>
+  </center>
+   
+</body>
+</html>

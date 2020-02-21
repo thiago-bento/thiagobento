@@ -141,5 +141,4 @@ button[disabled=disabled], button:disabled {
 #mensagem-erro {
 	color: red;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-style: oblique;
-}
+	}

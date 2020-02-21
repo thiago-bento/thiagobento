@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+body
+{
+  font-family:"Verdana";	
+}
+
+.top-faixa
+{
+   width:100%;
+   height:50px;
+   background-color:#F90;	
+}
+.faixa-logo
+{
+   width:100%;
+   height:auto;
+   background-color:#FFF;	
+}
+
+.faixa-info
+{
+   width:100%;
+   height:50px;
+   background-color:#333;
+   color: #fff;
+   text-align:center;	
+   vertical-align:middle;
+   padding-top:25px;
+   font-weight:bold;
+}
+
+.box-container-pecas
+{
+    width:100%;
+	display:table;
+	background-color:#fff;	
+}
+
+.box-peca
+{
+	width:90%;
+    max-width:350px;
+	min-height:350px;
+	border: 1px #999999 solid;	
+	display:inline-block;
+	vertical-align:top;
+	margin:5px;
+		
+}
+.box-peca span
+{
+   font-size:16px;
+   font-weight:bold;
+   color:#933;
+}
+
+select
+{
+   width:95%;
+   max-width:200px;
+   line-height:20px;
+   height:25px;
+   border: 1px solid #AAA;
+   font-size:14px;
+   color:#444;
+   text-indent:5px;
+   outline:medium none;
+   margin: 0px 10px;
+}

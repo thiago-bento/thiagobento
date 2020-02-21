@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Trabalhando com Eventos - Exemplo 2</title>
+<style>
+  body { font-family:Verdana; }
+  input[type=text]
+   {
+	   width:95%;
+	   max-width:450px;
+	   line-height:20px;
+	   height:25px;
+	   border: 1px solid #AAA;
+	   font-size:14px;
+	   color:#444;
+	   text-indent:5px;
+	   outline:medium none;
+	   margin: 0px 10px;
+   }
+   
+   hr { border: 1px #333 solid; }
+   .azul { color:#39F; }
+   .negrito { font-weight:bold; }
+   
+   img { cursor:pointer;}
+
+</style>
+  <script>
+
+    function mostrar(obj){
+    
+      document.getElementById(obj).style.display = "block";
+    }
+    function ocultar(obj){
+      document.getElementById(obj).style.display = "none";
+    } 
+    
+   </script>
+</head>
+
+<body>
+<h3>Trabalhando com Eventos - Exemplo 2</h3>
+<hr />
+<h5>Coloque o mouse sobre um dos itens abaixo</h5><br />
+<img  src="monitor.png"  onmouseover="mostrar('sobre_monitor')" onmouseout="ocultar('sobre_monitor')" />&nbsp;
+<img src="teclado.png" onmouseover="mostrar('sobre_teclado')" onmouseout="ocultar('sobre_teclado')" />&nbsp;
+<img src="mouse.png"  onmouseover="mostrar('sobre_mouse')" onmouseout="ocultar('sobre_mouse')"/>
+
+<div id="sobre_monitor" style="position:relative;display:none">
+  <img  src="sobre_monitor.png"  width="300" />
+</div>
+<div id="sobre_teclado" style="position:relative;left:110px; display:none">
+  <img  src="sobre_teclado.png" width="300" />
+</div>
+<div id="sobre_mouse" style="position:relative;left:500px; display:none">
+  <img  src="sobre_mouse.png"   width="300" />
+</div>
+</body>
+</html>

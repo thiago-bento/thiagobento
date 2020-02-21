@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+body { font-family:Verdana; }
+
+
+  div.box-cep {
+	  
+	  border:2px #F30 solid;
+	  width: 500px;
+	  height:200px;	
+	 
+	 
+	  
+  }
+  
+  div.box-cep h1
+  {
+	 font-size:20px;
+	 color:#fff;
+	 background-color:#F30;
+	 padding:0px;
+	 font-weight:bold;
+	 text-align:center; 
+     margin-top: 0px; 
+  }
+  
+  div.box-cep span
+  {
+	  font-size:14px;
+	  font-weight:bold;
+	  margin-left: 10px;
+  }
+  
+  div.box-cep output
+  {
+	  font-size:14px;
+	  font-weight:bold;
+	  margin-left: 10px;
+	  color:#F30;
+	  
+  }
+  
+   div.box-cep button {	   
+	background-color: #F30;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+	cursor:pointer;   	   
+   }   
+   
+
+   .formulario 
+   {
+	  width:100%;
+	     
+   }
+

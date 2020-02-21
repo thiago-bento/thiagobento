@@ -23,14 +23,16 @@ var botaoAdicionar = document.querySelector ("#adicionar-paciente");  // cria um
 
 });    
 
-    function exibeMensagensDeErro(erros){
-        var ul = document.querySelector("#mensagens-erro");
-        erros.forEach(function(erro){
-            var li = document.createElement("li");
-            li.textContent = erro;
-            ul.appendChild(li);
-        });
-    }
+function exibeMensagensDeErro(erros) {
+    var ul = document.querySelector("#mensagens-erro");
+    ul.innerHTML = "";
+
+    erros.forEach(function(erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}
     
 
 
