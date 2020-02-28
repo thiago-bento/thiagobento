@@ -25,3 +25,13 @@ get valor() {
     return this._valor;
 }
 }
+
+
+class Caneta {
+    constructor () {
+        this.cor = 'vermelha';
+        this.tamanho = '5cm';
+        this.clique = 'Sim';
+
+    }
+}
