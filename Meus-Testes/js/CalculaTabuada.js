@@ -1,36 +1,44 @@
 
-
-                function calcularTabuada(){  
-                    var total = '';
-                    var x = document.getElementById("numero").value;
-                    var padrao = confirm(" O valor final da tabuada é 10?");
                     
-            
-                    for (var i=1 ; i<=10 ; i++){
-                        result = i*x;
-                        
-                        total+= i+"x"+x+"="+result+"<br />" ;
-            
-                        console.log (total);
-                    }
-                    document.getElementById ("demo").innerHTML = total;
-            
-            
-            
-                }   
+                   
+                    
+        
 
+    function calcularTabuada(){  
 
-    var qnt  = [prompt ("Digite a quantidade de notas que o aluno teve")];
+        var total = '';
+        var padrao = confirm(" O valor final da tabuada é 10?");
+        if (padrao){
+                
+                var numeroDigitado = document.getElementById("numero").value;
+            
 
-    console.log (qnt);
-    if (qnt > 0 ){
-        for ( i=0; i<= qnt ; i++){
-             notas = prompt ("Digita a nota");
+                for (var i=1 ; i<=10 ; i++){
+                    
+                    result = i*numeroDigitado;
+                    
+                    total+= numeroDigitado+"x"+i+"="+result+"<br />" ;
+                                    
+            }    
+           
+                
+        }else{
 
+            var numeroNovo = prompt ("Informe ate que numero será realizada a tabuada ");
+            
+            var numeroDigitado = document.getElementById("numero").value;
+            
+
+            for (var i=1 ; i<=numeroNovo ; i++){
+                result = i*numeroDigitado;
+                
+                total+= numeroDigitado+"x"+i+"="+result+"<br />" ;
+                
+            }
+            
 
         }
-        console.log (notas);
-    }else {
-              document.writeln ("Saia");    
-                    }   
-      
+        
+        document.getElementById ("demo").innerHTML = total;
+
+    }

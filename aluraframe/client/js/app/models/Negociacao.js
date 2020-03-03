@@ -1,37 +1,33 @@
 class Negociacao {
+
     constructor (data , quantidade, valor) {
-        this._data = data;
+
+        this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
-        Object.freeze(this);
+        Object.freeze(this);    //congela as propriedades do this.
     
     }
 
-    get volume () {
+    get volume () {     // Metodo = Função dentro de uma classe, armazena o conteudo da variavel.
 
-        return this._quantidade * this._valor;
+        return this._quantidade * this._valor;  //construtor do volume
     }
-        
+            
 
-get data() {
-    return this._data;
-}
+    get data() {        // Metodo = Função dentro de uma classe, armazena o conteudo da variavel.
 
-get quantidade() {
-    return this._quantidade;
-}
+        return new Date(this._data.getTime());
+    }
 
-get valor() {
-    return this._valor;
-}
-}
+    get quantidade() {      // Metodo = Função dentro de uma classe, armazena o conteudo da variavel. 
 
+        return this._quantidade;
+    }
 
-class Caneta {
-    constructor () {
-        this.cor = 'vermelha';
-        this.tamanho = '5cm';
-        this.clique = 'Sim';
+    get valor() {      // Metodo = Função dentro de uma classe, armazena o conteudo da variavel.
 
+        return this._valor;
     }
 }
+
