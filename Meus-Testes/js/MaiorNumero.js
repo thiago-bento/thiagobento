@@ -9,8 +9,8 @@ function qntNumeros(){
     document.getElementById("resposta").innerHTML =" ";
     
 
-    }else if (numero > 100){
-        document.getElementById("demo").innerHTML = "O número não pode ser maior que 100"; 
+    }else if (numero > 10 ){
+        document.getElementById("demo").innerHTML = "O número não pode ser maior que 10"; 
         document.getElementById("resposta").innerHTML =" ";
         
 
