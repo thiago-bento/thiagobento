@@ -3,13 +3,13 @@ class MensagemView {
         this._elemento = elemento;
     }
 
-    _tamplate(model) {
+    _template(model) {
 
-        return `<p class = "alert alert-info> ${model.texto}</p>`
+        return `<p class = "alert alert-info>${model.texto}</p>`
     }
 
     update(model) {
 
-        this.elemento.innerHTML = this._template(model);
+        this._elemento.innerHTML = this._template(model);
     }
 }
