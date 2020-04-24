@@ -7,7 +7,7 @@ class Titular
     private $cpf;
     
 
-    public function __construct (string $nome, Cpf $cpf)
+    public function __construct (string $nome, CPF $cpf)
     {
 
         $this->nome= $nome;

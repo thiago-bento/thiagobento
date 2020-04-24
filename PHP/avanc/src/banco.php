@@ -5,10 +5,10 @@ require_once 'Titular.php';
 require_once 'Cpf.php';
 
 
-$thiago = new Titular('Thiado', '100.568.707-28');
-$primeiraConta = new Conta ($thiago);
+$vinicius = new Titular(new CPF('123.456.789-10'), 'Vinicius Dias');
+$primeiraConta = new Conta($vinicius);
 
-$jossao = new Titular('Jossao', '100.568.707-20');
+$jossao = new Titular(new CP('Jossao', '100.568.707-20');
 $segundaConta = new Conta ($jossao);
 
 
