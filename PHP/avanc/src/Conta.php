@@ -2,20 +2,17 @@
 
 class Conta {
 
-    private $nomeTitular;
-    private $cpfTitular;
+    private $titular;
     private $saldo;
-    private static $numeroConta=0;
+    private static $numeroConta = 0;
 
-    public function __construct(string $nome, string $cpf)
+    public function __construct(Titular $titular) // buscar Na Classe Titualar
     {
-        $this->nomeTitular = $nome;
-        $this->validaNomeTitular($nome);        
-        $this->cpfTitular = $cpf;
+        $this->titular=$titular;             
         $this->saldo = 0;
 
         self:: $numeroConta++;
-    }
+    } 
 
  
 
@@ -49,29 +46,18 @@ class Conta {
         }
     }
 
-    public function exibeSaldo(): float //get
+    public function get_Saldo(): float //get
     {
          return $this->saldo;
     }
 
-        public function exibeNomeTitular():string //set
+    public function recuperaNomeTitular():string
     {
-        return $this->nomeTitular;
+        return $this->titular->recuperaNome();
     }
-    
-    private function validaNomeTitular(string $nome)
-    {
-        if (strlen($nome) < 5) {
-            echo "Nome precisa ter pelo menos 5 caracteres". PHP_EOL;
-            exit();
-        }
-    }
-    
-    public function exibeCpfTitular():string  //get
-    {
-        return $this->cpfTitular;
-    } 
 
+
+   
     public function exibeNumeroConta():int
     {
         return self::$numeroConta;
