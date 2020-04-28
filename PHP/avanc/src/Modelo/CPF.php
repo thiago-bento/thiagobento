@@ -1,6 +1,8 @@
 <?php
 
-class CPF 
+namespace Alura\Banco\Modelo;
+
+class CPF
 {
     private $numero;
 
@@ -11,12 +13,16 @@ class CPF
                 'regexp' => '/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/'
             ]
         ]);
+
         if ($numero === false) {
             echo "Cpf inválido";
             exit();
         }
+        $this->numero = $numero;
+    }
 
-    public function recuperaCpf(): string
-{
-    return $this->numeros;
+    public function recuperaNumero(): string
+    {
+        return $this->numero;
+    }
 }
