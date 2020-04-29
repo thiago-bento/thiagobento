@@ -1,20 +1,24 @@
 <?php
 
-require_once 'autoload.php';
-
-use Alura\Banco\Modelo\{Funcionario,CPF};
+use Alura\Banco\Modelo\{CPF, Funcionario};
 use Alura\Banco\Service\ControladorDeBonificacoes;
 
-$umFuncionario = new Funcionario ('Thiago', 
-new CPF ('100.658.707-25'), 'Desenv', 
-1100
+require_once 'autoload.php';
+
+$umFuncionario = new Funcionario(
+    'Vinicius Dias',
+    new CPF('123.456.789-10'),
+    'Desenvolvedor',
+    1000
 );
 
-
-$umaFuncionaria = new Funcionario ('BIA', 
-new CPF ('100.658.707-22'), 'Geren', 
-3100
+$umaFuncionaria = new Funcionario(
+    'Patricia',
+    new CPF('987.654.321-10'),
+    'Gerente',
+    3000
 );
+
 
 $controlador = new ControladorDeBonificacoes();
 $controlador->adicionaBonificacaoDe($umFuncionario);
