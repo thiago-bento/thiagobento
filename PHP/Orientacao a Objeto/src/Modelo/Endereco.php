@@ -36,4 +36,16 @@ class Endereco
     {
         return $this->numero;
     }
+
+    public function __toString()  //exite todos os atributos do objeto
+    {
+        return "{$this->cidade}, {$this->bairro}, {$this->rua}, {$this->numero}";
+    }
+
+    public function __get(string $nomedoAtributo)  //exibe especificamente um atributo
+    {
+        $metodo = 'recupera'.ucfirst($nomedoAtributo);
+
+        return $this->$metodo();
+    }
 }

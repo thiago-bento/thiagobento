@@ -8,6 +8,7 @@ use Alura\Banco\Modelo\CPF;
 use Alura\Banco\Modelo\Conta\Conta;
 
 $endereco = new Endereco('Petrópolis', 'um bairro', 'minha rua', '71B');
+/*
 $vinicius = new Titular(new CPF('123.456.789-10'), 'Vinicius Dias', $endereco);
 $primeiraConta = new Conta($vinicius);
 $primeiraConta->deposita(500);
@@ -25,3 +26,7 @@ $outroEndereco = new Endereco('A', 'b', 'c', '1D');
 $outra = new Conta(new Titular(new CPF('123.654.789-01'), 'Abcdefg', $outroEndereco));
 unset($segundaConta);
 echo Conta::recuperaNumeroDeContas();
+*/
+
+echo $endereco;
+
