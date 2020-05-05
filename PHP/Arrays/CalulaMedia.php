@@ -20,3 +20,13 @@ class Calculadora
         }
     }
 }
+
+/*index.html
+
+$notas = [3,8,9,6,];
+
+$calculadora = new Calculadora();   \\novo objeto do tipo Calculadora
+$media = $calculadora->calculaMedia($notas);    \\ variavel = objeto criado -> funcao calculaMedia com parametros do array
+
+echo "<p>A média é: $media</p>";
+
