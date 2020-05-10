@@ -1,16 +1,18 @@
 <?php
 
-namespace MundoAnimal\Models\BichosTerra;
-
-require_once '../Animal.php';
-//require_once '../autoload.php';
+namespace MundoAnimal\Models;
 
 use Animal\Animal;
 
-Class BichosTerra extends Animal
+//require_once 'Animal.php';
+require_once 'autoload.php';
+
+
+
+class BichosTerra extends Animal
 {
-    private $apelido;
-    private $alimento;
+    protected $apelido;
+    protected $alimento;
 
     public function __construct(string $raca, string $genero, string $idade, string $habitat, string $apelido, string $alimento)
     {
@@ -26,8 +28,4 @@ Class BichosTerra extends Animal
 
 }
 
-$umUrso = new BichosTerra ('Usro Preto', 'Masculino', '10 anis', 'Floresta', 'ze comeia', 'carnivoro');
-
-echo $umUrso. PHP_EOL;
-echo $umUrso->getGenero();
 
