@@ -6,5 +6,5 @@
 
 function funcaoLancaExpetion()
 {
-    echo 'Mensagem da funcao';
+    echo 'Mensagem da funcao do arquivo excessao teste';
 }

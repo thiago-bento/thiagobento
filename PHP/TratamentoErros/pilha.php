@@ -1,5 +1,7 @@
 <?php
 
+require_once 'excessao.php';
+
 function funcao1()
 {
     echo 'Entrei na função 1' . PHP_EOL;
@@ -10,7 +12,8 @@ function funcao1()
     }catch (DivisionByZeroError | RuntimeException $erroOuExcessao){
         //echo $erroOuExcessao->getMessage().PHP_EOL;
         //echo $erroOuExcessao->getLine().PHP_EOL;
-        echo $erroOuExcessao->getTraceAsString().PHP_EOL;
+        //echo $erroOuExcessao->getTraceAsString().PHP_EOL;
+        echo funcaoLancaExpetion();
     }
     echo 'Saindo da função 1' . PHP_EOL;
 }
