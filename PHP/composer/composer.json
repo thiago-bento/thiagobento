@@ -1,0 +1,17 @@
+{
+    "name": "thiagobento/buscador-cursos",
+    "description": "Projeto para buscar cursos.",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "thiago-bento",
+            "email": "thiagoribeiro84@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "symfony/dom-crawler": "^4.2",
+        "symfony/css-selector": "^5.0"
+    }
+}
