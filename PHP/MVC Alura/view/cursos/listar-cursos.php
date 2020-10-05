@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/../inicio-html.php'; ?>
 
     <a href="/novo-curso" class="btn btn-primary mb-2">
-        Novo curso
+        Lista de Cursos
     </a>
 
     <ul class="list-group">

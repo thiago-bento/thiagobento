@@ -6,7 +6,7 @@ class FormularioInsercao implements InterfaceControladorRequisicao
 {
     public function processaRequisicao(): void
     {
-        $titulo = 'Novo curso';
+        $titulo = 'Cadastrar novo Curso';
         require __DIR__ . '/../../view/cursos/formulario.php';
     }
 }
