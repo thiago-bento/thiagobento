@@ -22,7 +22,9 @@ $numero = 5;
   
  
 
-
+/*
+ rsrsrsr
+ */
 echo "Calculo de IMC" . PHP_EOL;
 
 $peso = 40;
