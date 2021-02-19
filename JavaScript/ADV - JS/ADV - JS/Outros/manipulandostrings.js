@@ -6,7 +6,7 @@ function processar (){
     novaPalavra = palavra.replace ("ADV", "de");// substitui ADV por de
     minuscula = palavra.toLowerCase();
     maiuscula = palavra.toUpperCase();
-    apagar = palavra.substr(0,22); //escliu Avancada
+    apagar = palavra.substr(0,22); //excliu Avancada
 
     document.getElementById("out_quant_letras").innerHTML = quantidade;
     document.getElementById("out_posicao").innerHTML = posicao;

@@ -2,25 +2,21 @@
 
 echo "Calculadora";
 
-$numero = 5;
+function taboada($n){
 
-    if ($numero >=0 && $numero<=10){
 
-        for ($i = 0; $i <=10; $i++ ){
+
+        for ($i = 1; $i <=10; $i++ ){
             
-            $result = $numero * $i; 
+            $conta = $n * $i; 
 
-              echo "$i X $numero = $result " . PHP_EOL;
-
+              echo "$i X $n = $conta ".PHP_EOL;
+              
         }
+       
         
-    }else{  
-
-        echo "Numero precisa ser menor que 10 e maior que zero </br>". PHP_EOL;
-    
     }
-  
- 
+ echo taboada(55);
 
 /*
  rsrsrsr
@@ -31,10 +27,12 @@ $peso = 40;
 $altura = 1.76;
 $result = 0;
 $imc = $peso/($altura*$altura);
+const FATORIMC = 17;
+
 
 echo "Seu imc é : $imc, voce está com o peso ";
 
-if ($imc <17){
+if ($imc <FATORIMC){
     echo 'abaixo';
 
 } else if ($imc >18 && $imc <30){
