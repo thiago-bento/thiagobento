@@ -17,19 +17,22 @@
                 <div class="modulo verde">
                     <h3>Desafio</h3>
                     <ul>
-                        <li><a href="exercicio.php?dir=teste&file=switch">Exercício A</a></li>
+                        <li><a href="exercicio.php?dir=Udemy&file=switch">Exercício A</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="exercicio.php?dir=Udemy&file=palindromo">Palindromo</a></li>
                     </ul>
                 </div>
                 <div class="modulo vermelho">
                     <h3>Tipos</h3>
                     <ul>
-                        <li><a href="exercicio.php?dir=teste&file=formulario_post">Formulario Post</a></li>
+                        <li><a href="exercicio.php?dir=Udemy&file=formulario_post">Formulario Post</a></li>
                     </ul>
                     <ul>
-                        <li><a href="exercicio.php?dir=teste&file=operador_ternario">Operador Ternario </a></li>
+                        <li><a href="exercicio.php?dir=Udemy&file=operador_ternario">Operador Ternario </a></li>
                     </ul>
                     <ul>
-                        <li><a href="exercicio.php?dir=teste&file=arrays_meses">arrays_meses </a></li>
+                        <li><a href="exercicio.php?dir=Udemy&file=arrays_meses">arrays_meses </a></li>
                     </ul>
                 </div>
             </nav>

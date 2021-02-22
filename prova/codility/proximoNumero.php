@@ -3,13 +3,13 @@
 
 function listInt($n){
 
-    sort($n);
 
     for ($i=1; $i < count($n) ; $i++) { 
     
         if (!in_array($i, $n, false)) {
             $i+1;
-        echo "O numero positivo ausente na sequencia do array é  $i ".PHP_EOL;
+           
+       return $i;
         }
     }
 }
